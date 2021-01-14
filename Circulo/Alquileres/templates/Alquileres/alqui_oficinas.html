@@ -1,0 +1,161 @@
+{% extends 'App1/base.html'%}
+{% load static %}
+
+
+{% block header %}
+	<div id="fh5co-page">
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="row">
+				<div class="header-inner">
+					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+					<nav role="navigation">
+						<ul>
+							<li><a href="{% url 'alqui_casas' %}">Casas</a></li>
+							<li><a href="{% url  'alqui_locales' %} ">Locales</a></li>
+							
+							<li><a href="{% url 'alqui_departamentos' %}">Departamentos</a></li>
+							<li class="call"><a href="tel://123456789"><i class="icon-phone"></i> 3513502311</a></li>
+							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+{% endblock %}
+
+{% block content %}
+
+	<div class="fh5co-page-title" style="background-image: url(images/slide_6.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 animate-box">
+					<h1><span class="colored">Alquileres</span> Oficinas</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="best-deal">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+					<h2>Encontra aqui tu futura Oficina </h2>
+					<p>Nuestro  servicio esta abocado a la satifaccion de nuestros clientes </p>
+				</div>
+
+				{% for oficina in oficinas %}
+				
+					<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-property">
+						<figure>
+							<img src="{{oficina.imagen.url}}" alt="" class="img-responsive">
+							<a href="#" class="tag">Propiedades Disponibles </a>
+						</figure>
+						<div class="fh5co-property-innter">
+							<h3><a href="#">{{oficina.title}}</a></h3>
+							<div class="price-status">
+		                 	<span class="per">$</span><span class="price">{{oficina.price}}<span class="per">/Mes</span></span>
+		               </div>
+		               <p>{{oficina.content}} </p>
+	            	</div>
+	            	<p class="fh5co-property-specification">
+	            		<span><strong>{{oficina.superficie}}</strong> m2</span>  <span><strong>{{oficina.ambientes}}</strong> Dormitorios</span>  
+	            	</p>
+					</div>
+				</div>
+                {% endfor %}
+				
+
+
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center animate-box" data-animate-effect="fadeIn">
+					<nav>
+					  <ul class="pagination">
+					    <li class="disabled">
+					      <a href="#" aria-label="Previous">
+					        <span aria-hidden="true">&laquo;</span>
+					      </a>
+					    </li>
+					    <li class="active"><a href="#">1</a></li>
+					    <li><a href="#">2</a></li>
+					    <li><a href="#">3</a></li>
+					    <li><a href="#">4</a></li>
+					    <li><a href="#">5</a></li>
+					    <li>
+					      <a href="#" aria-label="Next">
+					        <span aria-hidden="true">&raquo;</span>
+					      </a>
+					    </li>
+					  </ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="fh5co-agents">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading white animate-box" data-animate-effect="fadeIn">
+					<h2>Propiedades Disponibles</h2>
+					<p>Elegi aqui lo que tanto estas buscando </p>
+				</div>
+				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/Casa.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Casas en Alquiler </h3>
+						<br>
+						<p>Nuestras Casas en Alquiler </p>
+						<p><a href="{% url 'alqui_casas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+					
+				</div>
+				
+				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/departamentos.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Departamentos en Alquiler</h3>
+						<p>Departamentos Disponibles</p>
+						<p><a href="{% url 'alqui_departamentos' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+				</div>
+				
+				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/locales.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Locales Comerciales en Alquiler</h3>
+						<p>Locales Disponibles</p>
+						<p><a href="{% url 'alqui_locales' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	
+
+	<div class="fh5co-cta" style="background-image: url(images/slide_4.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="col-md-12 text-center animate-box">
+				<h3>Estamos para ayudarte</h3>
+				<p><a href="{% url 'contacto' %}" class="btn btn-primary btn-outline with-arrow">Contactanos <i class="icon-arrow-right"></i></a></p>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
+	

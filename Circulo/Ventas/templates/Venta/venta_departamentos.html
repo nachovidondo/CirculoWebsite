@@ -1,0 +1,128 @@
+{% extends 'App1/base.html'%}
+
+{% load static %}
+
+
+
+{% block header %}
+	<div id="fh5co-page">
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="row">
+				<div class="header-inner">
+					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+					<nav role="navigation">
+						<ul>
+							
+							<li><a href="{% url  'venta_monoambientes' %} ">Monoambientes</a></li>
+							<li><a href="{% url 'venta_dptoundormi' %}">1 Dormitorio</a></li>
+                            <li><a href="{% url 'venta_dptodosdormi' %}">2 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_dptotresdormi' %}">3 Dormitorios</a></li>
+							
+							
+							
+							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+{% endblock %}
+
+{% block content %}
+   
+
+	<div class="fh5co-page-title" style="background-image: url(images/slide_6.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 animate-box">
+					<h1><span class="colored">Ventas</span> Departamentos</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="best-deal">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+					<h2>Ofrecemos el mejor servicio para la venta </h2>
+					<p>Nuestra historia genera mucha confianza  </p>
+				</div>
+            </div>
+        </div>
+    </div>
+    	<div id="fh5co-agents">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading white animate-box" data-animate-effect="fadeIn">
+					<h2>Propiedades Disponibles</h2>
+					<p>Elegi aqui lo que tanto estas buscando </p>
+				</div>
+				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/Casa.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Casas en Venta </h3>
+						<p>Nuestras Casas en Venta </p>
+						<p><a href="{% url 'venta_casas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+					
+				</div>
+				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/oficina.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Oficinas en Venta </h3>
+						<p>Oficinas disponibles</p>
+						<p><a href="{% url 'venta_oficinas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+				</div>
+				
+				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/terrenos.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Terrenos en Venta </h3>
+						<p>Terrenos Disponibles</p>
+						<p><a href="{% url 'venta_terrenos' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/locales.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Locales Comerciales en Venta </h3>
+						<p>Locales Disponibles</p>
+						<p><a href="{% url 'venta_locales' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	
+
+	<div class="fh5co-cta" style="background-image: url(images/slide_4.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="col-md-12 text-center animate-box">
+				<h3>Estamos para ayudarte</h3>
+				<p><a href="{% url 'contacto' %}" class="btn btn-primary btn-outline with-arrow">Contactanos <i class="icon-arrow-right"></i></a></p>
+			</div>
+		</div>
+	</div>
+
+			
+
+		
+
+{% endblock %}

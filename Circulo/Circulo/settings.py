@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -38,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App1',
-    'Comprar.apps.ComprarConfig',
-    'Alquilar',
+    'Ventas',
+    'Alquileres',
     'Contacto',
+
 ]
 
 MIDDLEWARE = [
@@ -124,6 +126,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
+
+#Configuracion de  Archivos media
+MEDIA_URL= 'CIRCULO/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #Configuracion email
 EMAIL_HOST = 'smtp.mailtrap.io'

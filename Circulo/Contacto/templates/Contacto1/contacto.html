@@ -1,0 +1,83 @@
+{% extends 'App1/base.html'%}
+{% load static %}
+
+{% block header %}
+	<div id="fh5co-page">
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="row">
+				<div class="header-inner">
+					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+					<nav role="navigation">
+						<ul>
+							<li><a href="{% url 'ventas' %}">Ventas</a></li>
+							<li><a href="{% url  'alquiler' %} ">Alquileres</a></li>
+							<li><a href="{% url 'tasaciones' %}">Tasaciones</a></li>
+							<li class="call"><a href="tel://123456789"><i class="icon-phone"></i> 3513502311</a></li>
+							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<form action  ="" method ="POST">
+        {% csrf_token %}   
+<div class="fh5co-contact animate-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h3>Informacion de Contacto</h3>
+					<ul class="contact-info">
+						<li><i class="icon-map"></i> Ituzaingó 94, Córdoba Argentina</li>
+						<li><i class="icon-phone"></i>3513502311</li>
+						<br>
+						<li><i class="icon-globe"></i><a href="#">www.circuloinmobiliario.com</a></li>
+					</ul>
+				</div>
+			    
+
+			
+                                    
+                 <div class="form-group">
+                            <div class="input-group">
+                                                {{ form.name }}
+                            </div>
+                </div>
+                 <div class="form-group">
+                                <div class="input-group">
+                                                {{ form.email }}
+                                 </div>
+                                          
+                            </div>
+                                     <div class="form-group">
+                                            <div class="input-group">
+                                               
+											    {{ form.content }}
+
+                                            </div>
+                                     </div>
+                                    <div class="text-center">
+                                            <input value="Send Message" class="btn btn-primary" type="submit">
+                                    </div>
+                                     
+        </form>
+			</div>
+		</div>	
+	</div>
+                         
+</form>			
+    
+	                  
+
+
+
+	{% endblock %}

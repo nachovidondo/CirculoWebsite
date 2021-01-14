@@ -14,7 +14,7 @@ def contacto(request):
             mail = EmailMessage(
                 "Circulo Inmobiliario : Nuevo Mensaje de Contacto ",
                 "De {} {}\n\nEscribio:\n\n {}".format(name ,email,content),
-                "circuloinmobiliario.com.ar", ["nacho_vidondo@hotmail.com"],
+                "circuloinmbobiliario.com.ar", ["ignaciovidondo@hotmail.com"],
                 reply_to = [email]
                 )
             try:
@@ -23,4 +23,5 @@ def contacto(request):
             except:
                 return redirect(reverse("contacto")+"?fail")
             
-    return render (request, 'Contacto/contacto.html', {'forms': contact_form })
+    return render (request, 'Contacto1/contacto.html', {'form':contact_form })
+
