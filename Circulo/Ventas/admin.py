@@ -13,6 +13,7 @@ class PostImagenesAdmin(admin.StackedInline):
 
 class PostAdmin(admin.ModelAdmin):
     inlines=[PostImagenesAdmin]
+    readonly_fields=["created","updated"]
     
     class Meta:
         model = Post

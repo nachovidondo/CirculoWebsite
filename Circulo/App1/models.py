@@ -6,7 +6,7 @@ class Inicio(models.Model):
     content = models.TextField(verbose_name="Contenido")
     image = models.ImageField(verbose_name="Imagen", blank =True ,upload_to="Inicio")
     precio = models.IntegerField(verbose_name="Precio")
-    dormitorios = models.IntegerField(verbose_name="Dormitorios")
+    ambientes = models.IntegerField(verbose_name="Dormitorios")
     superficie= models.IntegerField(verbose_name="Superficie")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Creado")
     updated = models.DateTimeField(auto_now=True, verbose_name="Editado")

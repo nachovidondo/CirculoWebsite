@@ -16,7 +16,7 @@
                             <li><a href="{% url 'venta_terrenos' %}">Terrenos</a></li>
                             <li><a href="{% url 'venta_casas' %}">Casas</a></li>
 							<li><a href="{% url 'venta_departamentos' %}">Departamentos</a></li>
-							<li class="call"><a href="tel://123456789"><i class="icon-phone"></i> 3513502311</a></li>
+							
 							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
 						</ul>
 					</nav>
@@ -47,23 +47,23 @@
 					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 				</div>
 
-				{% for alquiler in alquilers %}
+				{% for oficina in oficinas %}
 				
 					<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-property">
 						<figure>
-							<img src="{{alquiler.imagen.url}}" alt="" class="img-responsive">
+							<img src="{{oficina.imagen.url}}" alt="" class="img-responsive">
 							<a href="#" class="tag">Propiedades Disponibles </a>
 						</figure>
 						<div class="fh5co-property-innter">
-							<h3><a href="#">{{alquiler.title}}</a></h3>
+							<h3><a href="#">{{oficina.title}}</a></h3>
 							<div class="price-status">
-		                 	<span class="per">$</span><span class="price">{{alquiler.price}}<span class="per">/Mes</span></span>
+		                 	<span class="per">$</span><span class="price">{{oficina.price}}<span class="per">/Mes</span></span>
 		               </div>
-		               <p>{{alquiler.content}} </p>
+		               <p>{{oficina.content}} </p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{alquiler.superficie}}</strong> m2</span>  <span><strong>{{alquiler.ambientes}}</strong> Dormitorios</span>  
+	            		<span><strong>{{oficina.superficie}}</strong> m2</span>  <span><strong>{{oficina.ambientes}}</strong> Dormitorios</span>  
 	            	</p>
 					</div>
 				</div>

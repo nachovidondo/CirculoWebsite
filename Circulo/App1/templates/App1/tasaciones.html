@@ -14,7 +14,7 @@
 							<li><a href="{% url 'ventas' %}">Ventas</a></li>
 							<li><a href="{% url  'alquiler' %} ">Alquileres</a></li>
 							<li><a href="{% url 'tasaciones' %}">Tasaciones</a></li>
-							<li class="call"><a href="#"><i class="icon-phone"></i> 3513502311</a></li>
+							
 							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
 						</ul>
 					</nav>
@@ -44,58 +44,56 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
 					<h2>Ofrecemos tasaciones serias , cuidando el producto del cliente y garantizando el mejor de nuestros servicios</h2>
-					<p>Su propiedad en nuestras manos  </p>
+					
+					<a href="{% url 'contacto' %}" class="btn btn-primary btn-outline">Contactate con nosotros </a>
 				</div>
+			</div>
+		</div>	
 				
-				
-
-		
-
-	<div id="fh5co-testimonial">
+	<div id="fh5co-agents">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-					<h2>Happy Clients</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading white animate-box" data-animate-effect="fadeIn">
+					<h2>Propiedades Disponibles</h2>
+					<p>Elegi aqui lo que tanto estas buscando </p>
 				</div>
 				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
-					<blockquote>
-						<p>&ldquo; She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of. &rdquo;</p>
-						<p><span class="fh5co-author"><cite>Jason Davidson</cite></span><i class="icon twitter-color icon-twitter pull-right"></i></p>
 
-					</blockquote>
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/alquiler.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Alquileres </h3>
+						<br>
+						<p>Nuestras  Alquileres Disponibles </p>
+						<p><a href="{% url 'alquiler' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+					
 				</div>
 				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
-					<blockquote>
-						<p>&ldquo; Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way. She had a last view back on the skyline of her hometown Bookmarksgrove, the headline of. &rdquo;</p>
-						<p><span class="fh5co-author"><cite>Kyle Smith</cite></span><i class="icon googleplus-color icon-google-plus pull-right"></i></p>
-					</blockquote>
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/venta.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Ventas</h3>
+						<br>
+						<p>Ventas Disponibles</p>
+						<br>
+						<p><a href="{% url 'ventas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
 				</div>
-				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
-						
-					<blockquote>
-						<p>&ldquo; The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. S	he had a last view back on the skyline of her hometown Bookmarksgrove. &rdquo;</p>
-						<p><span class="fh5co-author"><cite>Rick Cook</cite></span><i class="icon facebook-color icon-facebook pull-right"></i></p>
-					</blockquote>
-				</div>
+				
+				
+				
 			</div>
 		</div>
 	</div>
-
-
-	
 	
 
 	
 
-	<div class="fh5co-cta" style="background-image: url(images/slide_4.jpg);">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="col-md-12 text-center animate-box">
-				<h3>Estamos Disponibles</h3>
-				<p><a href="{% url 'contacto' %}" class="btn btn-primary btn-outline with-arrow">Contactanos <i class="icon-arrow-right"></i></a></p>
-			</div>
-		</div>
-	</div>
+	
 
+
+	
 {% endblock %}
