@@ -1,6 +1,5 @@
-{% extends 'App1/base.html'%}
+{% extends 'App1/base.html' %}
 {% load static %}
-
 
 {% block header %}
 	<div id="fh5co-page">
@@ -13,8 +12,7 @@
 						<ul>
 							<li><a href="{% url 'ventas' %}">Ventas</a></li>
 							<li><a href="{% url  'alquiler' %} ">Alquileres</a></li>
-							
-							<li><a href="{% url 'acercanuestro' %}">Acerca Nuestro</a></li>
+							<li><a href="{% url 'tasaciones' %}">Tasaciones</a></li>
 							
 							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
 						</ul>
@@ -22,12 +20,13 @@
 				</div>
 			</div>
 		</div>
+			
 	</header>
 
-{% endblock %}
+{% endblock%}
+
 
 {% block content %}
-
 
 
 	<div class="fh5co-page-title" style="background-image: url(images/slide_6.jpg);">
@@ -35,7 +34,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 animate-box">
-					<h1><span class="colored">Nuestras</span> Tasaciones</h1>
+					<h1><span class="colored">Acerca</span> Nuestro</h1>
 				</div>
 			</div>
 		</div>
@@ -44,8 +43,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-					<h2>Ofrecemos tasaciones  , cuidando el producto del cliente y garantizando lo mejor de nuestros servicios</h2>
-					
+					<h2>Somos una empresa con más de 35 años  de experiencia en el mercado trabajando con nuestros clientes en el asesoramiento de la Compra-Venta , Alquileres y Tasaciones de inmuebles.</h2>
+					<br>
 					<a href="{% url 'contacto' %}" class="btn btn-primary btn-outline">Contactate con nosotros </a>
 				</div>
 			</div>
@@ -56,7 +55,7 @@
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading white animate-box" data-animate-effect="fadeIn">
 					<h2>Servicios Disponibles</h2>
-					<p>Elegi aqui lo que tanto estas buscando </p>
+					<p>Tenemos eso que tanto estas buscando </p>
 				</div>
 				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
 
@@ -83,18 +82,25 @@
 						<p><a href="{% url 'ventas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
 					</div>
 				</div>
+                <div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/tasacion.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Tasaciones</h3>
+						<br>
+						<p>Tasaciones Disponibles</p>
+						<br>
+						<p><a href="{% url 'tasaciones' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+				</div>
 				
 				
 				
 			</div>
 		</div>
-	</div>
 	
 
 	
 
-	
-
-
-	
 {% endblock %}

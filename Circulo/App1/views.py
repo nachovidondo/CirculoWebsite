@@ -12,3 +12,5 @@ def inicio(request):
 def tasaciones(request):
     
     return render(request,'App1/tasaciones.html')
+def acercanuestro(request):
+    return render (request,'App1/aboutus.html')
