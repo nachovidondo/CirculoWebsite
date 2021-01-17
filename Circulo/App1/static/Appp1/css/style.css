@@ -454,7 +454,7 @@
             }
             
             #fh5co-header h1 a {
-                color: white;
+                color: d31212;
             }
             
             #fh5co-header h1 a>span {
@@ -1077,7 +1077,7 @@
             }
             
             #fh5co-agents {
-                background: #4CB648;
+                background: #d31212;
             }
             
             #fh5co-agents .fh5co-agent {
@@ -1552,7 +1552,7 @@
             .fh5co-page-title h1 {
                 font-size: 40px;
                 line-height: 1.5;
-                color: #fff;
+                color: rgb(211, 14, 14);
                 margin: 0;
             }
             

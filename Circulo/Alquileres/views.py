@@ -50,3 +50,15 @@ def alqui_duplexdosdormi(request):
 def alqui_duplextresdormi(request):
     duplextresdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Duplex 3 Dormitorios"))
     return render(request,'Alquileres/alqui_duplextresdormi.html',{ 'duplextresdormis':duplextresdormis})
+def alqui_casadosdormi(request):
+    casadosdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Casas 2 Dormitorios"))
+    return render(request,'Alquileres/alqui_casadosdormi.html',{ 'casadosdormis':casadosdormis})
+def alqui_casatresdormi(request):
+    casatresdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Casas 3 Dormitorios"))
+    return render(request,'Alquileres/alqui_casatresdormi.html',{ 'casatresdormis':casatresdormis})
+def alqui_casacuatrodormi(request):
+    casacuatrodormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Casas 4 Dormitorios"))
+    return render(request,'Alquileres/alqui_casacuatrodormi.html',{ 'casacuatrodormis':casacuatrodormis})
+def alqui_casacincodormi(request):
+    casacincodormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Casas 5 Dormitorios"))
+    return render(request,'Alquileres/alqui_casacincodormi.html',{ 'casacincodormis':casacincodormis})

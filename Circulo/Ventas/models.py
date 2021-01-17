@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 # Create your models here.
 class Category(models.Model):
     nombre = models.CharField(max_length=200, verbose_name="Nombre ")
@@ -17,7 +18,7 @@ class Category(models.Model):
     
 class Post(models.Model):
     title=  models.CharField(max_length=200, verbose_name="Titulo ")
-    content = models.TextField(verbose_name="Contenido")
+    content = RichTextField(verbose_name="Contenido")
     imagen = models.ImageField(verbose_name="Imagen", blank =True ,upload_to="Ventas")
     price = models.IntegerField(verbose_name="Precio")
     ambientes = models.IntegerField(verbose_name="Ambientes")
@@ -28,7 +29,8 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True, verbose_name="Editado")
     
     class Meta:
-            verbose_name="Post"
+            verbose_name="Publicacion"
+            verbose_name_plural="Publicaciones"
             ordering= ["-created"]
     def __str__(self):
         return self.title

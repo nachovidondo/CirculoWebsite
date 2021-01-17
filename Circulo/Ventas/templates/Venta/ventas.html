@@ -18,6 +18,7 @@
 							<li><a href="{% url 'venta_oficinas' %}">Oficinas</a></li>
 							<li><a href="{% url 'venta_terrenos' %}">Terrenos</a></li>
 							<li><a href="{% url 'venta_departamentos' %}">Departamentos</a></li>
+							<li><a href="{% url 'venta_duplex' %}">Duplex</a></li>
 							
 							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
 						</ul>
@@ -50,27 +51,7 @@
 					<p> Asesoramiento y gestión integral para nuestros clientes</p>
 				</div>
 
-				  {% for post in posts %}
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-property">
-						<figure>
-							<img src="{{post.image.url}}" alt="" class="img-responsive">
-							<a href="#" class="tag">Disponible</a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">{{post.title}}</a></h3>
-							<div class="price-status">
-		                 	<span class="price">{{post.precio}}</span>
-		               </div>
-		               <p>{{post.content}}</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{post.superficie}}</strong> M2</span>  <span><strong>{{post.ambientes}}</strong></span> Dormitorios<span>
-	            	</p>
-					</div>
-				</div>
-
-               {% endfor %}
+				 
 
 			</div>
 			

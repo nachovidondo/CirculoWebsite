@@ -1,0 +1,110 @@
+{% extends 'App1/base.html'%}
+{% load static %}
+
+
+{% block header %}
+	<div id="fh5co-page">
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="row">
+				<div class="header-inner">
+					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+					<nav role="navigation">
+						<ul>
+						
+							<li><a href="{% url  'venta_duplexdosdormi' %} ">Duplex 2 Dormitorios</a></li>
+							<li><a href="{% url 'venta_duplextresdormi' %}">Duplex 3 Dormitorios</a></li>
+							
+							
+							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+{% endblock %}
+
+{% block content %}
+
+	<div class="fh5co-page-title" style="background-image: url(images/slide_6.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 animate-box">
+					<h1><span class="colored">Ventas</span> Duplex</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="best-deal">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+					<h2>Garantizamos un excelente  servicio en la Venta de su Inmueble </h2>
+					<p> Asesoramiento y gestión integral para nuestros clientes</p>
+				</div>
+
+				  
+
+			</div>
+			
+			</div>
+		</div>
+	</div>
+
+	
+
+			<div id="fh5co-agents">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading white animate-box" data-animate-effect="fadeIn">
+					<h2>Duplex Disponibles</h2>
+					<p>Tenemos lo que tanto estas buscando </p>
+				</div>
+				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/duplex.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Duplex 2 Dormitorios </h3>
+                        <br>
+						<p>Nuestros Duplex en Venta </p>
+						<p><a href="{% url 'venta_duplexdosdormi' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+					
+				</div>
+				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+					<div class="fh5co-agent">
+						<figure>
+							<img src="{% static 'Appp1/images/duplex3.jpg'%}" alt="Imagen Error">
+						</figure>
+						<h3>Duplex 3 Dormitorios</h3>
+                        <br>
+						<p>Nuestros Duplex en Venta</p>
+						<p><a href="{% url 'venta_duplextresdormi' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+
+	
+
+	<div class="fh5co-cta" style="background-image: url(images/slide_4.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="col-md-12 text-center animate-box">
+				<h3>Estamos para ayudarte</h3>
+				<p><a href="{% url 'contacto' %}" class="btn btn-primary btn-outline with-arrow">Contactanos <i class="icon-arrow-right"></i></a></p>
+			</div>
+		</div>
+	</div>
+
+	
+{% endblock %}
+	

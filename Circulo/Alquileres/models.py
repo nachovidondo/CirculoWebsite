@@ -30,7 +30,8 @@ class PostAlquiler(models.Model):
     updated = models.DateTimeField(auto_now=True, verbose_name="Editado")
     
     class Meta:
-            verbose_name="Post"
+            verbose_name="Publicacion"
+            verbose_name_plural="Plublicaciones"
             ordering= ["-created"]
     def __str__(self):
         return self.title
