@@ -12,6 +12,9 @@ urlpatterns = [
     path('alqui_casas/', views.alqui_casas ,name ="alqui_casas"),
     path('alqui_locales/', views.alqui_locales ,name ="alqui_locales"),
     path('alqui_oficinas/', views.alqui_oficinas ,name ="alqui_oficinas"),
+    path('alqui_duplex/', views.alqui_duplex ,name ="alqui_duplex"),
+    path('alqui_duplexdosdormi/', views.alqui_duplexdosdormi ,name ="alqui_duplexdosdormi"),
+    path('alqui_duplextresdormi/', views.alqui_duplextresdormi ,name ="alqui_duplextresdormi"),
 
  
 ]

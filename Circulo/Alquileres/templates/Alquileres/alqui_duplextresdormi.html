@@ -1,3 +1,4 @@
+
 {% extends 'App1/base.html'%}
 {% load static %}
 
@@ -11,11 +12,9 @@
 					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
 					<nav role="navigation">
 						<ul>
+							
+							<li><a href="{% url 'alqui_duplexdosdormi' %}">Duplex 2 Dormitorios</a></li>
 						
-							<li><a href="{% url  'alqui_locales' %} ">Locales</a></li>
-							<li><a href="{% url 'alqui_oficinas' %}">Oficinas</a></li>
-							<li><a href="{% url 'alqui_duplex' %}">Duplex</a></li>
-							<li><a href="{% url 'alqui_departamentos' %}">Departamentos</a></li>
 							
 							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
 						</ul>
@@ -34,7 +33,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 animate-box">
-					<h1><span class="colored">Alquileres</span>  Casas</h1>
+					<h1><span class="colored">Alquileres</span>Duplex 3 Dormitorios</h1>
 				</div>
 			</div>
 		</div>
@@ -47,23 +46,23 @@
 					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 				</div>
 
-				{% for casa in casas %}
+				{% for duplextresdormi in duplextresdormis %}
 				
 					<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-property">
 						<figure>
-							<img src="{{casa.imagen.url}}" alt="" class="img-responsive">
-							<a href="#" class="tag"> Disponible </a>
+							<img src="{{duplextresdormi.imagen.url}}" alt="" class="img-responsive">
+							<a href="#" class="tag">Departamento Disponible </a>
 						</figure>
 						<div class="fh5co-property-innter">
-							<h3><a href="#">{{casa.title}}</a></h3>
+							<h3><a href="#">{{duplextresdormi.title}}</a></h3>
 							<div class="price-status">
-		                 	<span class="per">$</span><span class="price">{{casa.price}}<span class="per">/Mes</span></span>
+		                 	<span class="per">$</span><span class="price">{{duplextresdormi.price}}<span class="per">/Mes</span></span>
 		               </div>
-		               <p>{{casa.content}} </p>
+		               <p>{{duplextresdormi.content}} </p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{casa.superficie}}</strong> m2</span>  <span><strong>{{casa.ambientes}}</strong> Dormitorios</span>  
+	            		<span><strong>{{duplextresdormi.superficie}}</strong> m2</span>  <span><strong>{{duplextresdormi.ambientes}}</strong> Dormitorios</span>  
 	            	</p>
 					</div>
 				</div>
