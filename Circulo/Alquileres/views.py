@@ -42,8 +42,8 @@ def alqui_oficinas(request):
     oficinas=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Oficinas"))
     return render(request,'Alquileres/alqui_oficinas.html',{ 'oficinas':oficinas})
 def alqui_duplex(request):
-    duplex=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Duplex"))
-    return render(request,'Alquileres/alqui_duplex.html',{ 'duplex':duplex})
+    
+    return render(request,'Alquileres/alqui_duplex.html')
 def alqui_duplexdosdormi(request):
     duplexdosdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Duplex 2 Dormitorios"))
     return render(request,'Alquileres/alqui_duplexdosdormi.html',{ 'duplexdosdormis':duplexdosdormis})

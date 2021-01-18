@@ -48,27 +48,9 @@
 					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 				</div>
 
-				{% for alquiler in alquilers %}
-				
-					<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-property">
-						<figure>
-							<img src="{{alquiler.imagen.url}}" alt="" class="img-responsive">
-							<a href="#" class="tag">Propiedades Disponibles </a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="#">{{alquiler.title}}</a></h3>
-							<div class="price-status">
-		                 	<span class="per">$</span><span class="price">{{alquiler.price}}<span class="per">/Mes</span></span>
-		               </div>
-		               <p>{{alquiler.content}} </p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{alquiler.superficie}}</strong> m2</span>  <span><strong>{{alquiler.ambientes}}</strong> Dormitorios</span>  
-	            	</p>
-					</div>
-				</div>
-                {% endfor %}
+			</div>
+		</div>
+	</div>
 				
 
 
