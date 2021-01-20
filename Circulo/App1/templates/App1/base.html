@@ -2,67 +2,63 @@
 {% load static %}
     <html class="no-js"> 
 	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title> Circulo Inmobiliario </title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title> Circulo Inmobiliario </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="" />
 
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+		<!-- Facebook and Twitter integration -->
+		<meta property="og:title" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta property="og:site_name" content=""/>
+		<meta property="og:description" content=""/>
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:image" content="" />
+		<meta name="twitter:url" content="" />
+		<meta name="twitter:card" content="" />
 
-	
-	<link rel="shortcut icon" href="favicon.ico">
-	<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> 
-	
-	<!-- WhatsApp.css -->
-	<link rel="stylesheet" href="{% static 'Appp1/css/whatsapp.css' %}">
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="{% static 'Appp1/css/animate.css' %}">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="{% static 'Appp1/css/icomoon.css' %}">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="{% static 'Appp1/css/bootstrap.css' %}">
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="{% static 'Appp1/css/flexslider.css' %}">
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="{% static 'Appp1/css/style.css' %}">
+		
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> 
+		
+		<!-- WhatsApp.css -->
+		<link rel="stylesheet" href="{% static 'Appp1/css/whatsapp.css' %}">
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="{% static 'Appp1/css/animate.css' %}">
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="{% static 'Appp1/css/icomoon.css' %}">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="{% static 'Appp1/css/bootstrap.css' %}">
+		<!-- Flexslider  -->
+		<link rel="stylesheet" href="{% static 'Appp1/css/flexslider.css' %}">
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="{% static 'Appp1/css/style.css' %}">
 
-	<!-- Modernizr JS -->
-	<script src="{% static 'Appp1/js/modernizr-2.6.2.min.js' %}"></script>
+		<!-- Modernizr JS -->
+		<script src="{% static 'Appp1/js/modernizr-2.6.2.min.js' %}"></script>
 
-	<script src="{% static 'Appp1/js/respond.min.js' %}"></script>
+		<script src="{% static 'Appp1/js/respond.min.js' %}"></script>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<a href="https://api.whatsapp.com/send?phone=543515900173&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20..." class="float" target="_blank">
-<i class="fa fa-whatsapp my-float"></i>
-</a>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<a href="https://api.whatsapp.com/send?phone=543515900173&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20..." class="float" target="_blank">
+		<i class="fa fa-whatsapp my-float"></i>
+		</a>
 	</head>
-
 	<body>
+		{% block header %}
+		{% endblock %}
 
-{% block header %}
-{% endblock %}
+			{% block content %}
 
-{% block content %}
-
-
-{% endblock %}
-</body>
+		{% endblock %}
+	</body>
 	<footer id="fh5co-footer" role="contentinfo">
-	
 		<div class="container">
 			<div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 				<h3>Matricula:CPI: 1073</h3>
@@ -75,9 +71,7 @@
 					<li><a href="{% url 'ventas' %}">Ventas</a></li>
 					<li><a href="{% url 'alquiler' %}">Alquileres</a></li>
 					<li><a href="{% url 'tasaciones' %}">Tasaciones </a></li>
-			
 				</ul>
-
 			</div>
 
 			<div class="col-md-2 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
@@ -90,15 +84,11 @@
 				</ul>
 			</div>
 			
-			
 			<div class="col-md-12 fh5co-copyright text-center">
 				<p>&copy; 2021 Circulo Inmobiliario </p>	
 			</div>
-			
 		</div>
 	</footer>
-	</div>
-	
 	
 	<!-- jQuery -->
 	<script src="{% static 'Appp1/js/jquery.min.js' %}"></script>
@@ -113,7 +103,5 @@
 
 	<!-- MAIN JS -->
 	<script src="{% static 'Appp1/js/main.js' %}"></script>
-
-	
 </html>
 
