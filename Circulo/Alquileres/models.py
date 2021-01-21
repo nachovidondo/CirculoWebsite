@@ -20,10 +20,10 @@ class Category(models.Model):
 class PostAlquiler(models.Model):
     title=  models.CharField(max_length=200, verbose_name="Titulo ")
     content = models.TextField(verbose_name="Contenido")
-    imagen= models.ImageField(verbose_name="Imagen", blank =True ,upload_to="Ventas")
+    imagen= models.ImageField(verbose_name="Imagen", blank =True ,upload_to="Alquileres")
     price = models.IntegerField(verbose_name="Precio")
-    ambientes = models.IntegerField(verbose_name="Ambientes")
-    superficie= models.IntegerField(verbose_name="Superficie")
+    ambientes = models.IntegerField(verbose_name="Dormitorios")
+    baños= models.IntegerField(verbose_name="Baños")
     autores = models.ForeignKey(User,verbose_name="Autor", on_delete=models.CASCADE)
     categories= models.ManyToManyField(Category, verbose_name="Categoria")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Creado")
@@ -39,8 +39,5 @@ class PostAlquiler(models.Model):
 class PostImagenes(models.Model):
     post= models.ForeignKey(PostAlquiler, default =None ,on_delete=models.CASCADE)
     image = models.ImageField(upload_to ="Imagenes",verbose_name="Imagenes") 
-   
-    class Meta:
-        verbose_name="Agregar mas Imagenes"
-        def __str__(self):
-            return self.post
+    def __str__(self):
+        return self.post.title

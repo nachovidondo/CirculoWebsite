@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '!^_s5gw7tjan9#4i)=)qg(1kib_r5w*es&lbhlh5d(_8gwmuk0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG =True
 
 ALLOWED_HOSTS = []
 
@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'App1',
-    'Ventas',
-    'Alquileres',
+    'Ventas.apps.VentasConfig',
+    'Alquileres.apps.AlquileresConfig',
     'Contacto',
     'ckeditor',
 

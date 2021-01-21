@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from . models import PostAlquiler, Category
+from django.shortcuts import render,get_object_or_404
+from . models import PostAlquiler, Category, PostImagenes
 
 # Create your views here.
 def alquiler(request):
@@ -16,15 +16,11 @@ def alqui_departamentos(request):
 
 def alqui_dptoundormi(request):
     dptoundormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "1 Dormitorio"))
-    
     return render (request, 'Alquileres/alqui_dptoundormi.html',{ 'dptoundormis' : dptoundormis })
 
 def alqui_dptodosdormi(request):
     dptodosdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "2 Dormitorios"))
     return render(request,'Alquileres/alqui_dptodosdormi.html',{ 'dptodosdormis':dptodosdormis})
-
-
-
 
 def alqui_dptotresdormi(request):
     dptotresdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "3 Dormitorios"))
@@ -56,6 +52,7 @@ def alqui_casadosdormi(request):
 def alqui_casatresdormi(request):
     casatresdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Casas 3 Dormitorios"))
     return render(request,'Alquileres/alqui_casatresdormi.html',{ 'casatresdormis':casatresdormis})
+
 def alqui_casacuatrodormi(request):
     casacuatrodormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Casas 4 Dormitorios"))
     return render(request,'Alquileres/alqui_casacuatrodormi.html',{ 'casacuatrodormis':casacuatrodormis})

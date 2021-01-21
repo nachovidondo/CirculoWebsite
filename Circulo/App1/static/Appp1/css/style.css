@@ -19,7 +19,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color: #7f7f7f;
+    color: #727070;
     background: #fff;
     height: 100%;
     position: relative;
@@ -451,6 +451,7 @@ figure {
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
     border-radius: 7px;
+    color: #332f2f
 }
 
 #fh5co-header h1 {
@@ -960,7 +961,7 @@ figure {
     bottom: 0;
     right: 0;
     padding: 2px 10px;
-    background: #118DF0;
+    background: #4CB648;
     color: #fff;
     display: -moz-inline-stack;
     display: inline-block;

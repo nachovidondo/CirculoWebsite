@@ -1,10 +1,6 @@
 from django.contrib import admin
-
 from .models import Category,PostAlquiler, PostImagenes
 
-
-
- 
 class PostImagenesAdmin(admin.StackedInline):
     model = PostImagenes
     
@@ -22,10 +18,3 @@ class AlquilerImagenesAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Category)
-
-
- 
-
-  
-
-

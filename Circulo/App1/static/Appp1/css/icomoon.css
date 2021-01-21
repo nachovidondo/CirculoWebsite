@@ -3340,3 +3340,7 @@
 .icon-dribbble2:before {
     content: "\e063";
 }
+
+.fa {
+    font-family: 'FontAwesome' !important;
+}
