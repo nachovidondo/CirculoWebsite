@@ -28,7 +28,7 @@
 
 {% block content %}
 
-	<div class="fh5co-page-title" style="background-image: url(images/slide_6.jpg);">
+		<div class="fh5co-page-title" style="background-image: url({% static 'Appp1/images/slide_6.jpg'%});">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -82,7 +82,9 @@
 		               <p>{{locale.content}}  </p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{locale.baños}}</strong>Baños</span> <span><strong>{{locale.ambientes}} </strong> <i class="fa fa-bed" aria-hidden="true"></i></span>  
+	            	<span>Superficie  <strong>{{locale.superficie}} </strong>  m2</span> 
+					<br>
+					<span><strong>{{locale.plantas}}</strong> Plantas  </span> <span><strong>{{locale.baños}}</strong> Baños</span>
 	            	</p>
 					</div>
 				</div>

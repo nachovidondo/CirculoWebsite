@@ -16,13 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('App1.urls')),
-    path('',include('Ventas.urls')),
-    path('',include('Alquileres.urls')),
-    path('',include('Contacto.urls'))
-    
+    path('ventas/',include('Ventas.urls')), 
+    path('alquileres/',include('Alquileres.urls')),
+    path('contacto',include('Contacto.urls')),
+ 
+   
     
 ]
 if settings.DEBUG:

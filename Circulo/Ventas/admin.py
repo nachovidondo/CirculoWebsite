@@ -11,14 +11,19 @@ class PostImagenesAdmin(admin.StackedInline):
 @admin.register(Post)
 
 
+
 class PostAdmin(admin.ModelAdmin):
     inlines=[PostImagenesAdmin]
-    readonly_fields=["created","updated"]
+    readonly_fields=["created","updated","imagen"]
+    list_display=("title","created","autor")
+    ordering=("autor",)
+    search_fields=("title","autor__username")
+    list_filter=("title","autor__username")
     
     class Meta:
         model = Post
 
-class AlquilerImagenesAdmin(admin.ModelAdmin):
+class VentasImagenesAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(Category)

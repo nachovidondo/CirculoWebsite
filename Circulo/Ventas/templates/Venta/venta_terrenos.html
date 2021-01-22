@@ -34,7 +34,7 @@
 {% block content %}
    
 
-	<div class="fh5co-page-title" style="background-image: url(images/slide_6.jpg);">
+	<div class="fh5co-page-title" style="background-image: url({% static 'Appp1/images/slide_6.jpg'%});">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -75,30 +75,7 @@
                {% endfor %}
 
 			</div>
-			<div class="row">
-				<div class="col-md-12 text-center animate-box" data-animate-effect="fadeIn">
-					<nav>
-					  <ul class="pagination">
-					    <li class="disabled">
-					      <a href="#" aria-label="Previous">
-					        <span aria-hidden="true">&laquo;</span>
-					      </a>
-					    </li>
-					    <li class="active"><a href="#">1</a></li>
-					    <li><a href="#">2</a></li>
-					    <li><a href="#">3</a></li>
-					    <li><a href="#">4</a></li>
-					    <li><a href="#">5</a></li>
-					    <li>
-					      <a href="#" aria-label="Next">
-					        <span aria-hidden="true">&raquo;</span>
-					      </a>
-					    </li>
-					  </ul>
-					</nav>
-				</div>
-			</div>
-		</div>
+			
 	</div>
 
 		<div id="fh5co-agents">
@@ -160,14 +137,5 @@
 
 	
 
-	<div class="fh5co-cta" style="background-image: url(images/slide_4.jpg);">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="col-md-12 text-center animate-box">
-				<h3>Estamos para ayudarte e </h3>
-				<p><a href="{% url 'contacto' %}" class="btn btn-primary btn-outline with-arrow">Contactanos <i class="icon-arrow-right"></i></a></p>
-			</div>
-		</div>
-	</div>
-
+	
 {% endblock %}

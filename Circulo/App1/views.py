@@ -1,11 +1,8 @@
 from django.shortcuts import render
-from . models import Inicio
+from . models import PostInicio, Category, PostImagenes
 # Create your views here.
 def inicio(request):
-  
-    inicios= Inicio.objects.all()
-
-
+    inicios= PostInicio.objects.filter(categories=Category.objects.get(nombre ="Inicio"))
     return render(request, 'App1/inicio.html',{'inicios' : inicios})
 
 

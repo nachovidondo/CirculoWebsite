@@ -38,11 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'App1',
+    'App1.apps.App1Config',
     'Ventas.apps.VentasConfig',
     'Alquileres.apps.AlquileresConfig',
     'Contacto',
-    'ckeditor',
+    
+ 
 
 ]
 
@@ -137,3 +138,6 @@ EMAIL_HOST = 'smtp.mailtrap.io'
 EMAIL_HOST_USER = '3a388c52c991ba'
 EMAIL_HOST_PASSWORD = 'a66e19d6ef1960'
 EMAIL_PORT = '2525'
+
+
+

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from ckeditor.fields import RichTextField
+
 # Create your models here.
 class Category(models.Model):
     nombre = models.CharField(max_length=200, verbose_name="Nombre ")
@@ -18,12 +18,14 @@ class Category(models.Model):
     
 class Post(models.Model):
     title=  models.CharField(max_length=200, verbose_name="Titulo ")
-    content = RichTextField(verbose_name="Contenido")
-    imagen = models.ImageField(verbose_name="Imagen", blank =True ,upload_to="Ventas")
+    content = models.TextField(verbose_name="Contenido")
+    imagen = models.ImageField(verbose_name="Imagen", blank =True ,null =True,upload_to="Ventas")
     price = models.IntegerField(verbose_name="Precio")
-    ambientes = models.IntegerField(verbose_name="Ambientes")
-    superficie= models.IntegerField(verbose_name="Superficie")
-    autor = models.ForeignKey(User,verbose_name="Autor", on_delete=models.CASCADE, default=None)
+    ambientes = models.IntegerField(verbose_name="Dormitorios o Ambientes",blank =True ,null =True)
+    superficie= models.IntegerField(verbose_name="Superficie",blank =True,null =True )
+    baños= models.IntegerField(verbose_name="Baños",blank = True,null =True)
+    plantas= models.IntegerField(verbose_name="Plantas", blank = True,null =True)
+    autor = models.ForeignKey(User,verbose_name="Autor", on_delete=models.CASCADE)
     categories= models.ManyToManyField(Category, verbose_name="Categoria")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Creado")
     updated = models.DateTimeField(auto_now=True, verbose_name="Editado")
@@ -41,6 +43,7 @@ class PostImagenes(models.Model):
     image = models.ImageField(upload_to ="Imagenes",verbose_name="Imagenes") 
    
     class Meta:
-        verbose_name="Agregar mas Imagenes  "
+        verbose_name="Agregar nueva Imagen"
+        verbose_name_plural="Agregar nuevas Imagenes"
         def __str__(self):
             return self.post

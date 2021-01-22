@@ -15,15 +15,15 @@ def alqui_departamentos(request):
     return render(request,'Alquileres/alqui_departamentos.html')
 
 def alqui_dptoundormi(request):
-    dptoundormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "1 Dormitorio"))
+    dptoundormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Departamento 1 Dormitorio"))
     return render (request, 'Alquileres/alqui_dptoundormi.html',{ 'dptoundormis' : dptoundormis })
 
 def alqui_dptodosdormi(request):
-    dptodosdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "2 Dormitorios"))
+    dptodosdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Departamento 2 Dormitorios"))
     return render(request,'Alquileres/alqui_dptodosdormi.html',{ 'dptodosdormis':dptodosdormis})
 
 def alqui_dptotresdormi(request):
-    dptotresdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "3 Dormitorios"))
+    dptotresdormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Departamento 3 Dormitorios"))
     return render(request,'Alquileres/alqui_dptotresdormi.html',{ 'dptotresdormis':dptotresdormis})
 
 def alqui_casas(request):

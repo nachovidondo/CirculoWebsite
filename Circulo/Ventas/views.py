@@ -11,13 +11,13 @@ def venta_monoambientes(request):
     monoambientes= Post.objects.filter(categories=Category.objects.get(nombre="Monoambientes"))
     return render(request,'Venta/venta_monoambientes.html',{'monoambientes': monoambientes})
 def venta_dptoundormi(request):
-    dptoundormis= Post.objects.filter(categories=Category.objects.get(nombre="1 Dormitorio"))
+    dptoundormis= Post.objects.filter(categories=Category.objects.get(nombre="Departamento 1 Dormitorio"))
     return render(request,'Venta/venta_dptoundormi.html',{'dptoundormis': dptoundormis})
 def venta_dptodosdormi(request):
-    dptodosdormis= Post.objects.filter(categories=Category.objects.get(nombre="2 Dormitorios"))
+    dptodosdormis= Post.objects.filter(categories=Category.objects.get(nombre="Departamento 2 Dormitorios"))
     return render(request,'Venta/venta_dptodosdormi.html',{'dptodosdormis': dptodosdormis})
 def venta_dptotresdormi(request):
-    dptotresdormis= Post.objects.filter(categories=Category.objects.get(nombre="3 Dormitorios"))
+    dptotresdormis= Post.objects.filter(categories=Category.objects.get(nombre="Departamento 3 Dormitorios"))
     return render(request,'Venta/venta_dptotresdormi.html',{'dptotresdormis': dptotresdormis})
 def venta_casas(request):
     return render(request,'Venta/venta_casas.html')
