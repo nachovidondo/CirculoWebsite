@@ -1,6 +1,6 @@
-from django.shortcuts import render
-from .models import Category, Post
+from django.shortcuts import render,get_object_or_404
 # Create your views here.
+from .models import Category, Post
 
 
 def ventas(request):
@@ -50,3 +50,7 @@ def venta_duplexdosdormi(request):
 def venta_duplextresdormi(request):
     duplextresdormis= Post.objects.filter(categories=Category.objects.get(nombre="Duplex 3 Dormitorios"))
     return render(request,'Venta/venta_duplextresdormi.html',{'duplextresdormis': duplextresdormis})
+
+def detail(request, post_id):
+    details = get_object_or_404(Post, pk = post_id)
+    return render (request,'Venta/articulos.html',{'details' : details})

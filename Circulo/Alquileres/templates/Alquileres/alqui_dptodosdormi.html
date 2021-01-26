@@ -7,8 +7,7 @@
 	<header id="fh5co-header" role="banner">
 		<div class="container">
 			<div class="row">
-				<div class="header-inner">
-					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+				<div class="header-inner"><img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
 					<nav role="navigation">
 						<ul>
 							
@@ -69,11 +68,11 @@
 									<span class="">Next</span>
 								</a>
 							</div>
-						<a href="#" class="tag"> Disponible </a>
+						<a href="{% url 'article' dptodosdormi.id %}" class="tag"> Disponible </a>
 						</figure>
 						
 						<div class="fh5co-property-innter">
-							<h3><a href="#">{{dptodosdormi.title}}</a></h3>
+							<h3><a href="{% url 'article' dptodosdormi.id %}">{{dptodosdormi.title}}</a></h3>
 							<div class="price-status">
 		                 	<span class="per">$</span><span class="price">{{dptodosdormi.price}}<span class="per">/Mes</span></span>
 		               </div>

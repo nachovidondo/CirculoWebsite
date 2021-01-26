@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+					<img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
 					<nav role="navigation">
 						<ul>
 							<li><a href="{% url 'ventas' %}">Ventas</a></li>
@@ -39,39 +39,33 @@
 	</div>
 
 <aside id="fh5co-hero" clsas="js-fullheight">
-	{% for inicio in inicios %}
-	
+	{% for inicio in inicios %} 
 		<div class="flexslider js-fullheight">
-		    
 			<ul class="slides">
 			{% for pi in inicio.postimagenes_set.all%}
-		   	<li style="background-image: url({{pi.image.url}});">
-			   {% endfor %}
-			           <div class="container">
+				<li style="background-image: url({{pi.image.url}});">
+				{% endfor %}
+					<div class="container">
+						<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
+							<div class="fh5co-property-brief-inner">
+								<div class="fh5co-box">
+									<h3><a href="#">{{inicio.title}}</a></h3>
+									<div class="price-status">
+										<span class="price">$ <span class="price">{{inicio.precio}}<a href="#" class="tag">Disponible</a></span>
+									</div>
+									<p>{{inicio.content}}</p>
 
-		   			<div class="col-md-12 text-center js-fullheight fh5co-property-brief slider-text">
-		   				<div class="fh5co-property-brief-inner">
-		   					<div class="fh5co-box">
-		   					
-		   						<h3><a href="#">{{inicio.title}}</a></h3>
-		   					<div class="price-status">
-                             	<span class="price">$ <span class="price">{{inicio.precio}}<a href="#" class="tag">Disponible</a></span>
-	                        </div>
-	                        <p>{{inicio.content}}</p>
-
-	                        <p class="fh5co-property-specification">
-                        		<span><strong>{{inicio.superficie}}</strong> m2</span>  <span><strong>{{inicio.ambientes}}</strong>Dormitorios</span>  
-                        	</p>
-							<p><a href="{% url 'venta_casas' %}" class="btn btn-primary">Informacion</a></p>
-									
-	                        
-	   						</div>
-		   				</div>
-		   			</div>
-		   		</div>
-		   	</li>
-			{% endfor %}
-		   	
+									<p class="fh5co-property-specification">
+										<span><strong>{{inicio.superficie}}</strong> m2</span>  
+										<span><strong>{{inicio.ambientes}}</strong>Dormitorios</span>  
+									</p>
+									<p><a href="{% url 'venta_casas' %}" class="btn btn-primary">Informacion</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				{% endfor %}
 		  	</ul>
 	  	</div>
 	</aside>
@@ -85,16 +79,16 @@
 					<p>Encontra en nuestro sitio todo lo que estas buscando </p>
 				</div>
 
-		<!--  Carousel -->
+				<!--  Carousel -->
 				{% for inicio in inicios %}
 				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-property">
 					<figure>
 					      <div id="carouselExampleControls" 
-								class="carousel slide" 
-								data-ride="carousel">
+							class="carousel slide" 
+							data-ride="carousel">
 								<div class="carousel-inner" data-toggle="modal" data-target="#galleryModal">
-                                 {% for pi in inicio.postimagenes_set.all %}
+                                {% for pi in inicio.postimagenes_set.all %}
 									<div class="item{% if forloop.first %} active {% endif %}">
 								        <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
 									</div>  
@@ -109,19 +103,26 @@
 									<span class="">Next</span>
 								</a>
 							</div>
-						<a href="#" class="tag"> Disponible </a>
+						<a href="{% url 'articulo' inicio.id %}" class="tag"> Disponible </a>
 						</figure>
 						
 						<div class="fh5co-property-innter">
-							<h3><a href="#">{{inicio.title}}</a></h3>
+							<h3><a href="{% url 'articulo' inicio.id %}">{{inicio.title}}</a></h3>
 							<div class="price-status">
 		                 	<span class="per">$</span><span class="price">{{inicio.price}}<span class="per">/Mes</span></span>
 		               </div>
 					 
-		               <p>{{inicio.content}}  </p>
+		               <p>{{inicio.content}}</p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{inicio.baños}}</strong>Baños</span> <span><strong>{{inicio.ambientes}} </strong> <i class="fa fa-bed" aria-hidden="true"></i></span>  
+	            		<span>
+							<strong>{{inicio.baños}}</strong>
+							Baños
+						</span> 
+						<span>
+							<strong>{{inicio.ambientes}} </strong> 
+							<i class="fa fa-bed" aria-hidden="true"></i>
+						</span>  
 	            	</p>
 					</div>
 				</div>

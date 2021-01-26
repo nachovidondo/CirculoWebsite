@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+					<img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
 					<nav role="navigation">
 						<ul>
 							<li><a href="{% url 'alqui_casas' %}">Casas</a></li>
@@ -60,6 +60,7 @@
 								        <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
 									</div>  
 								{% endfor %}
+
 								</div>
 							    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -74,10 +75,13 @@
 						</figure>
 						
 						<div class="fh5co-property-innter">
-							<h3><a href="#">{{oficina.title}}</a></h3>
+
+							<h3><a href="{% url 'article' oficina.id  %}">{{oficina.title}}</a></h3>
+				
 							<div class="price-status">
 		                 	<span class="per">$</span><span class="price">{{oficina.price}}<span class="per">/Mes</span></span>
 		               </div>
+					   
 					 
 		               <p>{{oficina.content}}  </p>
 	            	</div>

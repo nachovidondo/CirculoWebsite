@@ -21,5 +21,7 @@ urlpatterns = [
     path('venta_duplex/', views.venta_duplex ,name ="venta_duplex"),
     path('venta_duplexdosdormi/', views.venta_duplexdosdormi ,name ="venta_duplexdosdormi"),
     path('venta_duplextresdormi/', views.venta_duplextresdormi ,name ="venta_duplextresdormi"),
+    path('detail/<int:post_id>/', views.detail, name = "detail")
+    
 
 ]

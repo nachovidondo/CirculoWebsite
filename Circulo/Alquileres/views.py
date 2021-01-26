@@ -3,7 +3,8 @@ from . models import PostAlquiler, Category, PostImagenes
 
 # Create your views here.
 def alquiler(request):
-    return render (request,'Alquileres/alquiler.html')
+    alquiler = PostAlquiler.objects.all()
+    return render (request,'Alquileres/alquiler.html',{'alquiler':alquiler})
     
 
 def alqui_monoambientes(request):
@@ -59,3 +60,8 @@ def alqui_casacuatrodormi(request):
 def alqui_casacincodormi(request):
     casacincodormis=PostAlquiler.objects.filter(categories=Category.objects.get(nombre = "Casas 5 Dormitorios"))
     return render(request,'Alquileres/alqui_casacincodormi.html',{ 'casacincodormis':casacincodormis})
+
+def article(request,postalquiler_id):
+
+    articles = get_object_or_404(PostAlquiler,pk=postalquiler_id)
+    return render(request, 'Alquileres/alqui_post_detail.html',{'articles': articles})

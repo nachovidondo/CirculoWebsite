@@ -19,6 +19,7 @@ urlpatterns = [
     path('alqui_duplex/', views.alqui_duplex ,name ="alqui_duplex"),
     path('alqui_duplexdosdormi/', views.alqui_duplexdosdormi ,name ="alqui_duplexdosdormi"),
     path('alqui_duplextresdormi/', views.alqui_duplextresdormi ,name ="alqui_duplextresdormi"),
+    path('article/<int:postalquiler_id>', views.article, name='article')
 
  
 ]

@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+	<img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
 					<nav role="navigation">
 						<ul>
 							<li><a href="{% url 'alqui_casadosdormi' %}"> 2 Dormitorios</a></li>
@@ -67,11 +67,11 @@
 									<span class="">Next</span>
 								</a>
 							</div>
-						<a href="#" class="tag"> Disponible </a>
+						<a href="{% url 'article' casacincodormi.id %}" class="tag"> Disponible </a>
 						</figure>
 						
 						<div class="fh5co-property-innter">
-							<h3><a href="#">{{casacincodormi.title}}</a></h3>
+							<h3><a href="{% url 'article' casacincodormi.id %}">{{casacincodormi.title}}</a></h3>
 							<div class="price-status">
 		                 	<span class="per">$</span><span class="price">{{casacincodormi.price}}<span class="per">/Mes</span></span>
 		               </div>
@@ -132,5 +132,7 @@
 				</div>
 			</div>
 		{% endfor %}
+	</div>
+</div>
 {% endblock %}
 	

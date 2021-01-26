@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+				<img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
 					<nav role="navigation">
 						<ul>
 							<li><a href="{% url 'alqui_monoambientes' %}">Monoambientes</a></li>
@@ -35,7 +35,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 animate-box">
-					<h1><span class="colored">Alquileres</span> Disponibles</h1>
+					<h1><span class="colored">Alquileres</span> Departamentos</h1>
 				</div>
 			</div>
 		</div>
@@ -55,6 +55,20 @@
 
 
 	
+		</div>
+</div>
+
+    <div class="fh5co-section-with-image">
+		
+		<img src="{% static 'Appp1/images/image_1.jpg' %}" alt="" class="img-responsive">
+		<div class="fh5co-box animate-box">
+			<h2>Proactivos , Confiables  &amp; Transparentes</h2>
+			<p>Brindamos un cálido servicio  de la mano de la confianza de nuestros clientes</p>
+			<p><a href="{% url 'contacto' %}" class="btn btn-primary btn-outline with-arrow">Contactanos <i class="icon-arrow-right"></i></a></p>
+		</div>
+		
+	</div>
+</div>
 	
 {% endblock %}
 	
