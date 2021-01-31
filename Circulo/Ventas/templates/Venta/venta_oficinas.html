@@ -11,10 +11,10 @@
 					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
 					<nav role="navigation">
 						<ul>
-						
-							<li><a href="{% url 'venta_dptoundormi' %}">1 Dormitorio</a></li>
-                            <li><a href="{% url 'venta_dptodosdormi' %}">2 Dormitorios</a></li>
-                            <li><a href="{% url 'venta_dptotresdormi' %}">3 Dormitorios</a></li>
+							<li><a href="{% url  'venta_casas' %} ">Casas</a></li>
+							<li><a href="{% url 'venta_locales' %}">Locales</a></li>
+                            <li><a href="{% url 'venta_casas' %}">Casas</a></li>
+                            <li><a href="{% url 'venta_departamentos' %}">Departamentos</a></li>
 							
 							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
 						</ul>
@@ -32,7 +32,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 animate-box">
-					<h1><span class="colored">Ventas</span> Oficinas</h1>
+					<h1><a href ="{% url 'ventas' %}"><span class="colored">Ventas</a> </span>Oficinas</h1>
 				</div>
 			</div>
 		</div>
