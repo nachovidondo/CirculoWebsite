@@ -19,9 +19,15 @@ def contacto(request):
                 )
             try:
                 mail.send() #Si esta todo ok redireccionar
-                return redirect(reverse("contacto")+"?ok")
+                return redirect(reverse("automatic")+"?ok")
+                 
+                 
+            
             except:
                 return redirect(reverse("contacto")+"?fail")
             
     return render (request, 'Contacto1/contacto.html', {'form':contact_form })
+
+def automatic(request):
+    return render (request, 'Contacto1/automatic.html') 
 

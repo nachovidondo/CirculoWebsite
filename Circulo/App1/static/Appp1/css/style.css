@@ -912,6 +912,7 @@ figure {
 .fh5co-section-with-image h2 {
     font-size: 50px;
     margin-bottom: 20px;
+    height: 180px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1096,7 +1097,7 @@ figure {
 
 #fh5co-agents .fh5co-agent {
     padding: 30px;
-    max-height: 420px;
+    max-height: 450px;
     background: #fff;
     text-align: center;
     -webkit-box-shadow: 4px 11px 35px -14px rgba(0, 0, 0, 0.3);

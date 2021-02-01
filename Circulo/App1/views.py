@@ -14,5 +14,3 @@ def articulo(request, postinicio_id):
 def tasaciones(request):
     return render(request, 'App1/tasaciones.html')
 
-def acercanuestro(request):
-    return render (request, 'App1/aboutus.html') 
