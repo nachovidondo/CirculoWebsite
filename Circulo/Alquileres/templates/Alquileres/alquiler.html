@@ -8,7 +8,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
+                  <span class="rounded-circle">
+						<span class="rounded-circle">
+				  <a href="{% url 'alquiler' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+				  </span>
+				  </span>
 					<nav role="navigation">
 						<ul>
 						
@@ -38,7 +42,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 animate-box">
-					<h1><a href="{% url 'alquiler' %}"><span class="colored">Alquileres</a> </span>Disponibles</h1>
+					<h1><a href ="{% url 'alquiler' %}" style="text-decoration:none"><span class="colored">Alquileres</a> </span>Disponibles</h1>
 				</div>
 			</div>
 		</div>
@@ -77,7 +81,7 @@
 						<h3>Casas en Alquiler </h3>
 						<br>
 						<p>Nuestras Casas en Alquiler </p>
-						<p><a href="{% url 'alqui_casas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+						<p><a href="{% url 'alqui_casas' %}" class="btn btn-primary btn-outline">Información</a></p>
 					</div>
 					
 				</div>
@@ -89,7 +93,7 @@
 						<h3>Oficinas en Alquiler</h3>
 						<br>
 						<p>Oficinas disponibles</p>
-						<p><a href="{% url 'alqui_oficinas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+						<p><a href="{% url 'alqui_oficinas' %}" class="btn btn-primary btn-outline">Información</a></p>
 					</div>
 				</div>
 				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
@@ -99,7 +103,7 @@
 						</figure>
 						<h3>Departamentos en Alquiler</h3>
 						<p>Departamentos Disponibles</p>
-						<p><a href="{% url 'alqui_departamentos' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+						<p><a href="{% url 'alqui_departamentos' %}" class="btn btn-primary btn-outline">Información</a></p>
 					</div>
 				</div>
 				
@@ -110,7 +114,7 @@
 						</figure>
 						<h3>Locales Comerciales en Alquiler</h3>
 						<p>Locales Disponibles</p>
-						<p><a href="{% url 'alqui_locales' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+						<p><a href="{% url 'alqui_locales' %}" class="btn btn-primary btn-outline">Información</a></p>
 					</div>
 				</div>
 			</div>

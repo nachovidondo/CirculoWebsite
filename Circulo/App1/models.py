@@ -18,7 +18,7 @@ class Category(models.Model):
     
 class PostInicio(models.Model):
     title=  models.CharField(max_length=200, verbose_name="Titulo ")
-    content = models.TextField(verbose_name="Contenido")
+    content = models.TextField(verbose_name="Contenido",max_length=400,)
     imagen = models.ImageField(verbose_name="Imagen", blank =True ,null =True,upload_to="Inicio")
     price = models.IntegerField(verbose_name="Precio")
     ambientes = models.IntegerField(verbose_name="Dormitorios o Ambientes",blank =True ,null =True)

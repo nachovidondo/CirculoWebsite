@@ -10,7 +10,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+								<span class="rounded-circle">
+				  <a href="{% url 'ventas' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+				  </span>
 					<nav role="navigation">
 						<ul>
 							<li><a href="{% url 'venta_casas' %}">Casas</a></li>
@@ -37,8 +39,8 @@
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 animate-box">
-					<h1><a href ="{% url 'ventas' %}"><span class="colored">Ventas</a> </span></a> Propiedades</h1>
+				<div class="col-md-12 animate-box" >
+					<h1><a href ="{% url 'ventas' %}" style="text-decoration:none"><span class="colored">Ventas</a> </span></a> Propiedades</h1>
 				</div>
 			</div>
 		</div>
@@ -75,8 +77,10 @@
 							<img src="{% static 'Appp1/images/Casa.jpg'%}" alt="Imagen Error">
 						</figure>
 						<h3>Casas en Venta </h3>
+						
 						<p>Nuestras Casas en Venta </p>
-						<p><a href="{% url 'venta_casas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+						
+						<p><a href="{% url 'venta_casas' %}" class="btn btn-primary btn-outline">Información</a></p>
 					</div>
 					
 				</div>
@@ -86,18 +90,20 @@
 							<img src="{% static 'Appp1/images/oficina.jpg'%}" alt="Imagen Error">
 						</figure>
 						<h3>Oficinas en Venta </h3>
+						
 						<p>Oficinas disponibles</p>
-						<p><a href="{% url 'venta_oficinas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+						<p><a href="{% url 'venta_oficinas' %}" class="btn btn-primary btn-outline">Información</a></p>
 					</div>
 				</div>
 				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-agent">
 						<figure>
-							<img src="{% static 'Appp1/images/departamentos.jpg'%}" alt="Imagen Error">
+							<img src="{% static 'Appp1/images/terrenos.jpg'%}" alt="Imagen Error">
 						</figure>
-						<h3>Departamentos en Venta </h3>
-						<p>Departamentos Disponibles</p>
-						<p><a href="{% url 'venta_departamentos' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+						<h3>Terrenos en Venta</h3>
+						
+						<p>Terrenos Disponibles</p>
+						<p><a href="{% url 'venta_terrenos' %}" class="btn btn-primary btn-outline">Información</a></p>
 					</div>
 				</div>
 				
@@ -108,19 +114,21 @@
 						</figure>
 						<h3>Locales Comerciales en Venta </h3>
 						<p>Locales Disponibles</p>
-						<p><a href="{% url 'venta_locales' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+						<p><a href="{% url 'venta_locales' %}" class="btn btn-primary btn-outline">Información</a></p>
 					</div>
 				</div>
 				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-agent">
 						<figure>
-							<img src="{% static 'Appp1/images/terrenos.jpg'%}" alt="Imagen Error">
+							<img src="{% static 'Appp1/images/departamentos.jpg'%}" alt="Imagen Error">
 						</figure>
-						<h3>Terrenos en Venta</h3>
-						<p>Terrenos Disponibles</p>
-						<p><a href="{% url 'venta_terrenos' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+						<h3>Departamentos en Venta </h3>
+						<p>Departamentos Disponibles</p>
+						<p><a href="{% url 'venta_departamentos' %}" class="btn btn-primary btn-outline">Información</a></p>
 					</div>
 				</div>
+				
+				
 			</div>
 		</div>
 	</div>

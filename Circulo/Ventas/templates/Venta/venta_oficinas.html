@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+						<a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/circulo.svg' %}" width="106px" height="60px" alt=""></a>
 					<nav role="navigation">
 						<ul>
 							<li><a href="{% url  'venta_casas' %} ">Casas</a></li>
@@ -32,7 +32,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 animate-box">
-					<h1><a href ="{% url 'ventas' %}"><span class="colored">Ventas</a> </span>Oficinas</h1>
+					<h1><a href ="{% url 'ventas' %}" style="text-decoration:none"><span class="colored">Ventas</a> </span>Oficinas</h1>
 				</div>
 			</div>
 		</div>
@@ -64,12 +64,12 @@
 								</div>
 							   
 							</div>
-						     <a href="{% url 'detail' oficina.id  %}" class="tag"> Ver Propiedad</a>
+						     <a href="{% url 'ofice_local_details_ventas' oficina.id  %}" class="tag"> Ver Propiedad</a>
 						</figure>
 						
 						<div class="fh5co-property-innter">
 
-							<h3><a href="{% url 'detail' oficina.id  %}">{{oficina.title}}</a></h3>
+							<h3><a href="{% url 'ofice_local_details_ventas' oficina.id  %}">{{oficina.title}}</a></h3>
 				
 							<div class="price-status">
 		                 	<span class="per">$</span><span class="price">{{oficina.price}}<span class="per">/Mes</span></span>

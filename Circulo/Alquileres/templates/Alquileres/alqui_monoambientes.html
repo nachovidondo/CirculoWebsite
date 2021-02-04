@@ -8,7 +8,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
+					<span class="rounded-circle">
+				  		<span class="rounded-circle">
+				  <a href="{% url 'alquiler' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+				  </span>
+				  </span>
 					<nav role="navigation">
 						<ul>
 							
@@ -33,7 +37,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 animate-box">
-					<h1><a href="{% url 'alquiler' %}"><span class="colored">Alquileres</a></span>  Monoambientes</h1>
+					<h1><a href ="{% url 'alquiler' %}" style="text-decoration:none">Alquileres</a></span>  Monoambientes</h1>
 				</div>
 			</div>
 		</div>
@@ -64,12 +68,12 @@
 								</div>
 							   
 							</div>
-						     <a href="{% url 'article' monoambiente.id  %}" class="tag"> Ver Propiedad</a>
+						     <a href="{% url 'monoambiente_details_alqui' monoambiente.id  %}" class="tag"> Ver Propiedad</a>
 						</figure>
 						
 						<div class="fh5co-property-innter">
 
-							<h3><a href="{% url 'article' monoambiente.id  %}">{{monoambiente.title}}</a></h3>
+							<h3><a href="{% url 'monoambiente_details_alqui' monoambiente.id  %}">{{monoambiente.title}}</a></h3>
 				
 							<div class="price-status">
 		                 	<span class="per">$</span><span class="price">{{monoambiente.price}}<span class="per">/Mes</span></span>
@@ -79,7 +83,7 @@
 		               <p>{{monoambiente.content}}  </p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{monoambiente.baños}}</strong>Baños</span> <span><strong>{{monoambiente.ambientes}} </strong> <i class="fa fa-bed" aria-hidden="true"></i></span>  
+	            		<span><strong>{{monoambiente.baños}}</strong>Baño</span> 
 	            	</p>
 					</div>
 				</div>

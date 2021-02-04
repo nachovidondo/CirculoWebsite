@@ -8,12 +8,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+						<a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/circulo.svg' %}" width="106px" height="60px" alt=""></a>
 					<nav role="navigation">
 						<ul>
 						
 							<li><a href="{% url 'venta_dptoundormi' %}">1 Dormitorio</a></li>
-                            <li><a href="{% url 'venta_monoambiente' %}">2 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_dptodosdormi' %}">2 Dormitorios</a></li>
                             <li><a href="{% url 'venta_dptotresdormi' %}">3 Dormitorios</a></li>
 							
 							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
@@ -32,7 +32,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 animate-box">
-					<h1><a href ="{% url 'ventas' %}"><span class="colored">Ventas</a> </span>Monoambientes Dormitorios </h1>
+					<h1><a href ="{% url 'ventas' %}" style="text-decoration:none"><span class="colored">Ventas</a> </span>Monoambientes </h1>
 				</div>
 			</div>
 		</div>
@@ -63,12 +63,12 @@
 								</div>
 							   
 							</div>
-						     <a href="{% url 'detail' monoambiente.id  %}" class="tag"> Ver Propiedad</a>
+						     <a href="{% url 'monoambiente_details_ventas' monoambiente.id  %}" class="tag"> Ver Propiedad</a>
 						</figure>
 						
 						<div class="fh5co-property-innter">
 
-							<h3><a href="{% url 'detail' monoambiente.id  %}">{{monoambiente.title}}</a></h3>
+							<h3><a href="{% url 'monoambiente_details_ventas' monoambiente.id  %}">{{monoambiente.title}}</a></h3>
 				
 							<div class="price-status">
 		                 	<span class="per">$</span><span class="price">{{monoambiente.price}}<span class="per">/Mes</span></span>
@@ -78,7 +78,7 @@
 		               <p>{{monoambiente.content}}  </p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{monoambiente.baños}}</strong>Baños</span> <span><strong>{{monoambiente.ambientes}} </strong> <i class="fa fa-bed" aria-hidden="true"></i></span>  
+	            		<span><strong>{{monoambiente.baños}}</strong>Baños</span> 
 	            	</p>
 					</div>
 				</div>

@@ -62,6 +62,13 @@ def alqui_casacincodormi(request):
     return render(request,'Alquileres/alqui_casacincodormi.html',{ 'casacincodormis':casacincodormis})
 
 def article(request,postalquiler_id):
-
+    
     articles = get_object_or_404(PostAlquiler,pk=postalquiler_id)
     return render(request, 'Alquileres/alqui_post_detail.html',{'articles': articles})
+
+def ofice_local_details_alqui(request,postalquiler_id):
+    ofice_local_details_alquis = get_object_or_404(PostAlquiler,pk=postalquiler_id)
+    return render(request, 'Alquileres/ofice_local_details_alqui.html',{'ofice_local_details_alquis': ofice_local_details_alquis})
+def monoambiente_details_alqui(request, postalquiler_id):
+    monoambiente_details_alqui = get_object_or_404(PostAlquiler, pk=postalquiler_id)
+    return render (request,'Alquileres/monoambiente_details_alqui.html',{'monoambiente_details_alqui' : monoambiente_details_alqui})

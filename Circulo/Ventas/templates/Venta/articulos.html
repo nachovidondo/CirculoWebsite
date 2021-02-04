@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
+					<a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/circulo.svg' %}" width="106px" height="60px" alt=""></a>
 					<nav role="navigation">
 						<ul>
 							<li><a href="{% url 'venta_casas' %}">Casas</a></li>
@@ -65,11 +65,11 @@
 								</div>
 							    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="">Previous</span>
+									<span class=""> <-- </i></span>
 								</a>
 								<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
 									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="">Next</span>
+									<span class=""> --> </span>
 								</a>
 							</div>
 						<a href="#" class="tag"> Disponible </a>
@@ -84,7 +84,7 @@
 		               <p>{{details.content}}  </p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{details.baños}}</strong>Baños</span> <span><strong>{{details.ambientes}} </strong> <i class="fa fa-bed" aria-hidden="true"></i></span>  
+	            		<span><strong>{{details.baños}}</strong>Baños</span> <span><strong>{{details.ambientes}} </strong>Dormitorios</span>  
 	            	</p>
 					</div>
 				</div>

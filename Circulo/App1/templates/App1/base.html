@@ -60,9 +60,10 @@
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
 			<div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+			    <h3>Maria José Piscitello</h3>
 				<h3>Matricula:CPI: 1073</h3>
 				
-				<p><a href="{% url 'contacto' %}" class="btn btn-primary btn-outline with-arrow btn-sm">info@circuloin.com <i class="icon-arrow-right"></i></a></p>
+				<p><a href="{% url 'contacto' %}" class="btn btn-primary btn-outline with-arrow btn-sm">Contactanos <i class="icon-arrow-right"></i></a></p>
 			</div>
 			<div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 				<h3>Nuestros Servicios</h3>
@@ -84,7 +85,10 @@
 			</div>
 			
 			<div class="col-md-12 fh5co-copyright text-center">
-			<img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
+					<span class="rounded-circle">
+				  <a href="{% url 'alquiler' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+				  </span>
+				  <br>
 				<p>&copy; 2021 Circulo Inmobiliario </p>	
 			</div>
 		</div>

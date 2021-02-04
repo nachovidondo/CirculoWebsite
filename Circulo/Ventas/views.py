@@ -54,3 +54,9 @@ def venta_duplextresdormi(request):
 def detail(request, post_id):
     details = get_object_or_404(Post, pk = post_id)
     return render (request,'Venta/articulos.html',{'details' : details})
+def ofice_local_details_ventas(request, post_id):
+    ofice_local_details_ventas = get_object_or_404(Post, pk = post_id)
+    return render (request,'Venta/ofice_local_details_ventas.html',{'ofice_local_details_ventas' : ofice_local_details_ventas})
+def monoambiente_details_ventas(request, post_id):
+    monoambiente_details_ventas = get_object_or_404(Post, pk = post_id)
+    return render (request,'Venta/monoambiente_details_ventas.html',{'monoambiente_details_ventas' : monoambiente_details_ventas})

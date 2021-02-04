@@ -10,7 +10,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+						<a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/circulo.svg' %}" width="106px" height="60px" alt=""></a>
 					<nav role="navigation">
 						<ul>
 							
@@ -39,7 +39,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 animate-box">
-					<h1><a href ="{% url 'ventas' %}"><span class="colored">Ventas</a> </span> Terrenos</h1>
+					<h1><a href ="{% url 'ventas' %}" style="text-decoration:none"><span class="colored">Ventas</a> </span></a> Terrenos</h1>
 				</div>
 			</div>
 		</div>
@@ -67,7 +67,7 @@
 		               <p>{{post.content}}</p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{post.superficie}}</strong> M2</span>  <span><strong>{{post.ambientes}}</strong></span> Dormitorios<span>
+	            		<span><strong>{{post.superficie}}</strong> M2</span> 
 	            	</p>
 					</div>
 				</div>

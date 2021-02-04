@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<h1><a href="{% url 'inicio' %}">Circulo</a></h1>
+						<a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/circulo.svg' %}" width="106px" height="60px" alt=""></a>
 					<nav role="navigation">
 						<ul>
 							<li><a href="{% url  'venta_monoambientes' %} ">Monoambientes</a></li>
@@ -32,7 +32,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 animate-box">
-					<h1><a href ="{% url 'ventas' %}"><span class="colored">Ventas</a> </span>Departamento 2 Dormitorios </h1>
+					<h1><a href ="{% url 'ventas' %}" style="text-decoration:none"><span class="colored">Ventas</a> </span>Departamento 2 Dormitorios </h1>
 				</div>
 			</div>
 		</div>
@@ -78,7 +78,7 @@
 		               <p>{{dptodosdormi.content}}  </p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{dptodosdormi.baños}}</strong>Baños</span> <span><strong>{{dptodosdormi.ambientes}} </strong> <i class="fa fa-bed" aria-hidden="true"></i></span>  
+	            		<span><strong>{{dptodosdormi.baños}}</strong>Baños</span> <span><strong>{{dptodosdormi.ambientes}} </strong> Dormitorios</i></span>   
 	            	</p>
 					</div>
 				</div>

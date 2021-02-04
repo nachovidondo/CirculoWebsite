@@ -19,7 +19,11 @@ urlpatterns = [
     path('alqui_duplex/', views.alqui_duplex ,name ="alqui_duplex"),
     path('alqui_duplexdosdormi/', views.alqui_duplexdosdormi ,name ="alqui_duplexdosdormi"),
     path('alqui_duplextresdormi/', views.alqui_duplextresdormi ,name ="alqui_duplextresdormi"),
-    path('article/<int:postalquiler_id>', views.article, name='article')
+    path('article/<int:postalquiler_id>', views.article, name='article'),
+    path('ofice_local_details_alqui/<int:postalquiler_id>/', views.ofice_local_details_alqui, name = "ofice_local_details_alqui"),
+    path('monoambiente_details_alqui/<int:postalquiler_id>/', views.monoambiente_details_alqui, name = "monoambiente_details_alqui")
+    
+    
 
  
 ]

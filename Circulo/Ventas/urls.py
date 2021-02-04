@@ -21,7 +21,9 @@ urlpatterns = [
     path('venta_duplex/', views.venta_duplex ,name ="venta_duplex"),
     path('venta_duplexdosdormi/', views.venta_duplexdosdormi ,name ="venta_duplexdosdormi"),
     path('venta_duplextresdormi/', views.venta_duplextresdormi ,name ="venta_duplextresdormi"),
-    path('detail/<int:post_id>/', views.detail, name = "detail")
+    path('detail/<int:post_id>/', views.detail, name = "detail"),
+    path('ofice_local_details_ventas/<int:post_id>/', views.ofice_local_details_ventas, name = "ofice_local_details_ventas"),
+    path('monoambiente_details_ventas/<int:post_id>/', views.monoambiente_details_ventas, name = "monoambiente_details_ventas")
     
 
 ]

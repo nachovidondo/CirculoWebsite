@@ -8,7 +8,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="header-inner">
-					<img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
+					<a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/circulo.svg' %}" width="106px" height="60px" alt=""></a>
 					<nav role="navigation">
 						<ul>
 							<li><a href="{% url 'alqui_casas' %}">Casas</a></li>
@@ -82,7 +82,7 @@
 		               <p>{{articulos.content}}  </p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{articulos.baños}}</strong>Baños</span> <span><strong>{{articulos.ambientes}} </strong> <i class="fa fa-bed" aria-hidden="true"></i></span>  
+	            		<span><strong>{{articulos.baños}}</strong>Baños</span> <span><strong>{{articulos.ambientes}} </strong> Dormitorios</i></span>  
 	            	</p>
 					</div>
 				</div>
