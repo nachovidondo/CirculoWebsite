@@ -35,64 +35,64 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-                    <h2>Encontra aqui tu futura Casa </h2>
-                    <p>Nuestro servicio esta abocado a la satifaccion de nuestros clientes </p>
+                    <h2>Encontra en esta sección todas nuestras Casas disponibles!</h2>
                 </div>
-
-                <!--  Carousel -->
-                {% for casacincodormi in casacincodormis %}
-                <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-                    <div class="fh5co-property">
-                        <figure>
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    {% for pi in casacincodormi.postimagenes_set.all %}
-                                    <div class="item {% if forloop.first %} active {% endif %}">
-                                        <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
-                                    </div>
-                                    {% endfor %}
-
-                                </div>
-
-                            </div>
-                            <a href="{% url 'detail' casacincodormi.id  %}" class="tag"> Ver Propiedad</a>
-                        </figure>
-
-                        <div class="fh5co-property-innter">
-
-                            <h3><a href="{% url 'detail' casacincodormi.id  %}">{{casacincodormi.title}}</a></h3>
-
-                            <div class="price-status">
-                                <span class="per">$</span><span class="price">{{casacincodormi.price}}<span class="per">/Mes</span></span>
-                            </div>
-
-
-                            <p>{{casacincodormi.content}} </p>
-                        </div>
-                        <p class="fh5co-property-specification">
-                            <span><strong>{{casacincodormi.baños}}</strong> Baños</span> <span><strong>{{casacincodormi.ambientes}} </strong> <i class="fa fa-bed" aria-hidden="true"></i></span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Modal -->
-                <div class="modal fade" style='z-index: 999' id="galleryModal" data-backdrop="false" tabindex="-1" role="dialog">
-
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="galleryModalLabel">
-                                </h5>
-
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-                {% endfor %}
             </div>
+
+            <!--  Carousel -->
+            {% for casacincodormi in casacincodormis %}
+            <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
+                <div class="fh5co-property">
+                    <figure>
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                {% for pi in casacincodormi.postimagenes_set.all %}
+                                <div class="item {% if forloop.first %} active {% endif %}">
+                                    <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
+                                </div>
+                                {% endfor %}
+
+                            </div>
+
+                        </div>
+                        <a href="{% url 'detail' casacincodormi.id  %}" class="tag"> Ver Propiedad</a>
+                    </figure>
+
+                    <div class="fh5co-property-innter">
+
+                        <h3><a href="{% url 'detail' casacincodormi.id  %}">{{casacincodormi.title}}</a></h3>
+
+                        <div class="price-status">
+                            <span class="per">$</span><span class="price">{{casacincodormi.price}}<span class="per">/Mes</span></span>
+                        </div>
+
+
+                        <p>{{casacincodormi.content}} </p>
+                    </div>
+                    <p class="fh5co-property-specification">
+                        <span><strong>{{casacincodormi.baños}}</strong> Baños</span> <span><strong>{{casacincodormi.ambientes}} </strong> <i class="fa fa-bed" aria-hidden="true"></i></span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" style='z-index: 999' id="galleryModal" data-backdrop="false" tabindex="-1" role="dialog">
+
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="galleryModalLabel">
+                            </h5>
+
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            {% endfor %}
         </div>
-        {% endblock %}
+    </div>
+    {% endblock %}
