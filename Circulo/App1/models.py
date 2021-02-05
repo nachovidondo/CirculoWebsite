@@ -17,7 +17,9 @@ class Category(models.Model):
     
     
 class PostInicio(models.Model):
+    disponibilidad=(('Venta','Venta'),('Alquiler','Alquiler'))
     title=  models.CharField(max_length=200, verbose_name="Titulo ")
+    disponibilidad=models.CharField(max_length=100, choices=disponibilidad)
     content = models.TextField(verbose_name="Contenido",max_length=400,)
     imagen = models.ImageField(verbose_name="Imagen", blank =True ,null =True,upload_to="Inicio")
     price = models.IntegerField(verbose_name="Precio")

@@ -1,106 +1,100 @@
-{% extends 'App1/base.html'%}
-{% load static %}
-
-{% block header %}
-	<div id="fh5co-page">
-	<header id="fh5co-header" role="banner">
-		<div class="container">
-			<div class="row">
-				<div class="header-inner">
-						<span class="rounded-circle">
+{% extends 'App1/base.html'%} {% load static %} {% block header %}
+<div id="fh5co-page">
+    <header id="fh5co-header" role="banner">
+        <div class="container">
+            <div class="row">
+                <div class="header-inner">
+                    <span class="rounded-circle">
 				  <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
 				  </span>
-					<nav role="navigation">
-						<ul>
-							<li><a href="{% url 'ventas' %}">Ventas</a></li>
-							<li><a href="{% url  'alquiler' %} ">Alquileres</a></li>
-							<li><a href="{% url 'tasaciones' %}">Tasaciones</a></li>
-							
-							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
+                    <nav role="navigation">
+                        <ul>
+                            <li><a href="{% url 'ventas' %}">Ventas</a></li>
+                            <li><a href="{% url  'alquiler' %} ">Alquileres</a></li>
+                            <li><a href="{% url 'tasaciones' %}">Tasaciones</a></li>
 
-{% endblock %}
-
-
-
-{% block content %}
-<div class="fh5co-page-title" style="background-image: url({% static 'Appp1/images/slide_6.jpg'%});">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 animate-box">
-					<h1><span class="colored">Contacto </span> Circulo  </h1>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-<form action  ="" method ="POST">
-        {% csrf_token %}   
-<div class="fh5co-contact animate-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-3">
-					<h3>Coordiná una visita y recibí  asesoramiento personalizado de uno de nuestros ejecutivos </h3>
-					<ul class="contact-info">
-						<li><i class="icon-map"></i> Ituzaingó 94, Córdoba Argentina</li>
-						
-						
-						<br>
-						<li><i class="icon-globe"></i><a href="#">www.circuloinmobiliario.com</a></li>
-					</ul>
-				</div>
-			    
-
-			<div class="col-md-8 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
-					<div class="row">
-						<div class="col-md-6">
-                                    
-                 <div class="form-group">
-                            <div class="input-group">
-                                                {{ form.name }}
-                            </div>
+                            <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                 <div class="form-group" >
-                                <div class="input-group">
-                                                {{ form.email }}
-                                 </div>
-                                          
-                            </div>
-							
-                                     <div id ="1" class="form-group">
-                                            <div class="input-group" style="height:100px">
-                                               
-											  <div class="form-group"  >
-								                {{form.content}}
+            </div>
+        </div>
+    </header>
 
-                                            </div>
-											
-                                     </div>
-                                    <div class="text-center">
-                                            <input value="Enviar " class="btn btn-primary" type="submit">
+    {% endblock %} {% block content %}
+    <div class="fh5co-page-title" style="background-image: url({% static 'Appp1/images/slide_6.jpg'%});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 animate-box">
+                    <h1><span class="colored">Contacto </span> Circulo </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="fh5co-contact animate-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h3>Contactate con nosotros y recibí asesoramiento personalizado </h3>
+                        <ul class="contact-info">
+                            <li><i class="icon-map"></i> Ituzaingó 94, Córdoba Argentina</li>
+
+
+                            <br>
+                            <li><i class="icon-phone"></i><a href="#">3513502311</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-md-8 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+                        <div class="row">
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        {{ form.name }}
                                     </div>
-                                     
-        </form>
-		<br>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        {{ form.email }}
+                                    </div>
 
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.8696492721815!2d-64.18416438554058!3d-31.417717281403608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a29b5c92abc5%3A0x8e4f50c4bfffe1c7!2sC%C3%ADrculo%20Inmobiliario!5e0!3m2!1ses!2sar!4v1610992099765!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-			</div>
-		</div>	
-	</div>
-                         
-</div>
-</div>			
-    
-                  
-</div>
-</div>
+                                </div>
+
+                                <div id="1" class="form-group">
+                                    <div class="input-group" style="height:100px">
+
+                                        <div class="form-group">
+                                            {{form.content}}
+
+                                        </div>
+
+                                    </div>
+                                    <div class="text-center">
+                                        <input value="Enviar " class="btn btn-primary" type="submit">
+                                    </div>
+
+    </form>
+    <br>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.8696492721815!2d-64.18416438554058!3d-31.417717281403608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a29b5c92abc5%3A0x8e4f50c4bfffe1c7!2sC%C3%ADrculo%20Inmobiliario!5e0!3m2!1ses!2sar!4v1610992099765!5m2!1ses!2sar"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
 
 
-	{% endblock %}
+    </div>
+    </div>
+
+
+    {% endblock %}

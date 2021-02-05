@@ -1,141 +1,134 @@
-{% extends 'App1/base.html'%}
+{% extends 'App1/base.html'%} {% load static %} {% block header %}
+<div id="fh5co-page">
+    <header id="fh5co-header" role="banner">
+        <div class="container">
+            <div class="row">
+                <div class="header-inner">
+                                      <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+                    <nav role="navigation">
+                        <ul>
 
-{% load static %}
-
-
-
-{% block header %}
-	<div id="fh5co-page">
-	<header id="fh5co-header" role="banner">
-		<div class="container">
-			<div class="row">
-				<div class="header-inner">
-						<a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/circulo.svg' %}" width="106px" height="60px" alt=""></a>
-					<nav role="navigation">
-						<ul>
-							
-							<li><a href="{% url  'venta_locales' %} ">Locales</a></li>
-							<li><a href="{% url 'venta_oficinas' %}">Oficinas</a></li>
+                            <li><a href="{% url  'venta_locales' %} ">Locales</a></li>
+                            <li><a href="{% url 'venta_oficinas' %}">Oficinas</a></li>
                             <li><a href="{% url 'venta_casas' %}">Casas</a></li>
                             <li><a href="{% url 'venta_departamentos' %}">Departamentos</a></li>
-							
-							
-							
-							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
 
-{% endblock %}
 
-{% block content %}
-   
 
-	<div class="fh5co-page-title" style="background-image: url({% static 'Appp1/images/slide_6.jpg'%});">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 animate-box">
-					<h1><a href ="{% url 'ventas' %}" style="text-decoration:none"><span class="colored">Ventas</a> </span></a> Terrenos</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="best-deal">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-					<h2>Ofrecemos el mejor servicio para la venta </h2>
-					<p>Nuestra historia genera mucha confianza  </p>
-				</div>
+                            <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 
-				  {% for post in posts %}
-				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-property">
-						<figure>
-							<img src="{{post.image.url}}" alt="" class="img-responsive">
-							<a href="#" class="tag">Propiedades Disponibles </a>
-						</figure>
-						<div class="fh5co-property-innter">
-							<h3><a href="{% url 'detail' terreno.id %}">{{post.title}}</a></h3>
-							<div class="price-status">
-		                 	<span class="price">{{post.precio}}</span>
-		               </div>
-		               <p>{{post.content}}</p>
-	            	</div>
-	            	<p class="fh5co-property-specification">
-	            		<span><strong>{{post.superficie}}</strong> M2</span> 
-	            	</p>
-					</div>
-				</div>
+    {% endblock %} {% block content %}
 
-               {% endfor %}
 
-			</div>
-			
-	</div>
+    <div class="fh5co-page-title" style="background-image: url({% static 'Appp1/images/slide_6.jpg'%});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 animate-box">
+                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none"><span class="colored">Ventas</a> </span>
+                        </a> Terrenos</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="best-deal">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+                    <h2>Ofrecemos el mejor servicio para la venta </h2>
+                    <p>Nuestra historia genera mucha confianza </p>
+                </div>
 
-		<div id="fh5co-agents">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading white animate-box" data-animate-effect="fadeIn">
-					<h2>Propiedades Disponibles</h2>
-					<p>Elegi aqui lo que tanto estas buscando </p>
-				</div>
-				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+                {% for post in posts %}
+                <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
+                    <div class="fh5co-property">
+                        <figure>
+                            <img src="{{post.image.url}}" alt="" class="img-responsive">
+                            <a href="#" class="tag">Propiedades Disponibles </a>
+                        </figure>
+                        <div class="fh5co-property-innter">
+                            <h3><a href="{% url 'detail' terreno.id %}">{{post.title}}</a></h3>
+                            <div class="price-status">
+                                <span class="price">{{post.precio}}</span>
+                            </div>
+                            <p>{{post.content}}</p>
+                        </div>
+                        <p class="fh5co-property-specification">
+                            <span><strong>{{post.superficie}}</strong> M2</span>
+                        </p>
+                    </div>
+                </div>
 
-					<div class="fh5co-agent">
-						<figure>
-							<img src="{% static 'Appp1/images/Casa.jpg'%}" alt="Imagen Error">
-						</figure>
-						<h3>Casas en Venta </h3>
-                        <br>
-						<p>Nuestras Casas en Venta </p>
-						<p><a href="{% url 'venta_casas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
-					</div>
-					
-				</div>
-				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-agent">
-						<figure>
-							<img src="{% static 'Appp1/images/oficina.jpg'%}" alt="Imagen Error">
-						</figure>
-						<h3>Oficinas en Venta </h3>
-                        <br>
-						<p>Oficinas disponibles</p>
-						<p><a href="{% url 'venta_oficinas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
-					</div>
-				</div>
-				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-agent">
-						<figure>
-							<img src="{% static 'Appp1/images/departamentos.jpg'%}" alt="Imagen Error">
-						</figure>
-						<h3>Departamentos en Venta </h3>
-						<p>Departamentos Disponibles</p>
-						<p><a href="{% url 'venta_departamentos' %}" class="btn btn-primary btn-outline">Informacion</a></p>
-					</div>
-				</div>
-				
-				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-agent">
-						<figure>
-							<img src="{% static 'Appp1/images/locales.jpg'%}" alt="Imagen Error">
-						</figure>
-						<h3>Locales Comerciales en Venta </h3>
-						<p>Locales Disponibles</p>
-						<p><a href="{% url 'venta_locales' %}" class="btn btn-primary btn-outline">Informacion</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
+                {% endfor %}
 
-	
+            </div>
 
-	
-{% endblock %}
+        </div>
+
+        <div id="fh5co-agents">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center fh5co-heading white animate-box" data-animate-effect="fadeIn">
+                        <h2>Propiedades Disponibles</h2>
+                        <p>Elegi aqui lo que tanto estas buscando </p>
+                    </div>
+                    <div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+
+                        <div class="fh5co-agent">
+                            <figure>
+                                <img src="{% static 'Appp1/images/Casa.jpg'%}" alt="Imagen Error">
+                            </figure>
+                            <h3>Casas en Venta </h3>
+                            <br>
+                            <p>Nuestras Casas en Venta </p>
+                            <p><a href="{% url 'venta_casas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+                        <div class="fh5co-agent">
+                            <figure>
+                                <img src="{% static 'Appp1/images/oficina.jpg'%}" alt="Imagen Error">
+                            </figure>
+                            <h3>Oficinas en Venta </h3>
+                            <br>
+                            <p>Oficinas disponibles</p>
+                            <p><a href="{% url 'venta_oficinas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+                        <div class="fh5co-agent">
+                            <figure>
+                                <img src="{% static 'Appp1/images/departamentos.jpg'%}" alt="Imagen Error">
+                            </figure>
+                            <h3>Departamentos en Venta </h3>
+                            <p>Departamentos Disponibles</p>
+                            <p><a href="{% url 'venta_departamentos' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+                        <div class="fh5co-agent">
+                            <figure>
+                                <img src="{% static 'Appp1/images/locales.jpg'%}" alt="Imagen Error">
+                            </figure>
+                            <h3>Locales Comerciales en Venta </h3>
+                            <p>Locales Disponibles</p>
+                            <p><a href="{% url 'venta_locales' %}" class="btn btn-primary btn-outline">Informacion</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        {% endblock %}

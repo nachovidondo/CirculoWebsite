@@ -1,100 +1,62 @@
-{% extends 'App1/base.html'%}
-{% load static %}
+{% extends 'App1/base.html'%} {% load static %} {% block header %}
+<div id="fh5co-page">
+    <header id="fh5co-header" role="banner">
+        <div class="container">
+            <div class="row">
+                <div class="header-inner">
+
+                    <img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
 
 
-{% block header %}
-	<div id="fh5co-page">
-	<header id="fh5co-header" role="banner">
-		<div class="container">
-			<div class="row">
-				<div class="header-inner">
-				
-		            <img src="{% static 'Appp1/images/circulo.svg'%}" width="106px" height="60px" alt="">
-						
-						 
-					<nav role="navigation">
-						<ul>
-							<li><a href="{% url 'ventas' %}">Ventas</a></li>
-							<li><a href="{% url  'alquiler' %} ">Alquileres</a></li>
-							<li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
+                    <nav role="navigation">
+                        <ul>
+                            <li><a href="{% url 'ventas' %}">Ventas</a></li>
+                            <li><a href="{% url  'alquiler' %} ">Alquileres</a></li>
+                            <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
 
-{% endblock %}
-
-{% block content %}
+    {% endblock %} {% block content %}
 
 
 
-	<div class="fh5co-page-title" style="background-image: url({% static 'Appp1/images/slide_6.jpg'%});">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 animate-box">
-					<h1><span class="colored">Nuestras</span> Tasaciones</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="best-deal">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-					<h2>Ofrecemos tasaciones  , cuidando el producto del cliente y garantizando lo mejor de nuestros servicios</h2>
-					
-					<a href="{% url 'contacto' %}" class="btn btn-primary btn-outline">Contactate con nosotros </a>
-				</div>
-			</div>
-		</div>	
-				
-	<div id="fh5co-agents">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading white animate-box" data-animate-effect="fadeIn">
-					<h2>Servicios Disponibles</h2>
-					<p>Elegi aqui lo que tanto estas buscando </p>
-				</div>
-				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
+    <div class="fh5co-page-title" style="background-image: url({% static 'Appp1/images/slide_6.jpg'%});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 animate-box">
+                    <h1><span class="colored">Nuestras</span> Tasaciones</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="best-deal">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+                    <h2>Ofrecemos tasaciones , cuidando el producto del cliente y garantizando lo mejor de nuestros servicios</h2>
 
-					<div class="fh5co-agent">
-						<figure>
-							<img src="{% static 'Appp1/images/alquiler.jpg'%}" alt="Imagen Error">
-						</figure>
-						<h3>Alquileres </h3>
-						
-						<p>Alquileres Disponibles </p>
-						<p><a href="{% url 'alquiler' %}" class="btn btn-primary btn-outline">Informacion</a></p>
-					</div>
-					
-				</div>
-				<div class="col-md-4 text-center item-block animate-box" data-animate-effect="fadeIn">
-					<div class="fh5co-agent">
-						<figure>
-							<img src="{% static 'Appp1/images/venta.jpg'%}" alt="Imagen Error">
-						</figure>
-						<h3>Ventas</h3>
-						
-						<p>Ventas Disponibles</p>
-						
-						<p><a href="{% url 'ventas' %}" class="btn btn-primary btn-outline">Informacion</a></p>
-					</div>
-				</div>
-				
-				
-				
-			</div>
-		</div>
-	</div>
-	
+                    <a href="{% url 'contacto' %}" class="btn btn-primary btn-outline">Contactate con uno de nuestros Asesores</a>
+                </div>
+            </div>
+        </div>
 
-	
+    </div>
+</div>
+<div class="fh5co-section-with-image">
 
-	
+    <img src="{% static 'Appp1/images/image_1.jpg' %}" alt="" class="img-responsive">
+    <div class="fh5co-box animate-box">
+        <h2>Proactivos , Confiables &amp; Transparentes</h2>
+        <p>Brindamos un cálido servicio de la mano de la confianza de nuestros clientes</p>
 
+    </div>
 
-	
+</div>
+</div>
+
 {% endblock %}
