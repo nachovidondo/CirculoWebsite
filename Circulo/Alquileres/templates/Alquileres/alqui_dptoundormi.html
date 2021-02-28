@@ -40,8 +40,8 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
                     <h2>Encontra en esta sección todos nuestros Departamentos disponibles!</h2>
-
                 </div>
+
                 <!--  Carousel -->
                 {% for dptoundormi in dptoundormis %}
                 <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
@@ -69,11 +69,12 @@
                                 <span class="per">$</span><span class="price">{{dptoundormi.price}}<span class="per">/Mes</span></span>
                             </div>
 
-
-                            <p>{{dptoundormi.content}} </p>
+                            <div class="property-content-wrapper">
+                                <p>{{dptoundormi.content}} </p>
+                            </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{dptoundormi.baños}}</strong> Baños</span> <span><strong>{{dptoundormi.ambientes}} </strong> Dormitorios</i></span>
+                            <span><strong>{{dptoundormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{dptoundormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
                         </p>
                     </div>
                 </div>

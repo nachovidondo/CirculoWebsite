@@ -11,8 +11,7 @@
                     </span>
                     <nav role="navigation">
                         <ul>
-
-                            <li><a href="{% url 'alqui_dptoundormi' %}">1 Dormitorio</a></li>
+                            <li><a href="{% url 'alqui_dptoundormi' %}">1 Dormitorio </a></li>
                             <li><a href="{% url 'alqui_dptodosdormi' %}">2 Dormitorios</a></li>
                             <li><a href="{% url 'alqui_dptotresdormi' %}">3 Dormitorios</a></li>
 
@@ -31,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box">
-                    <h1><a href="{% url 'alquiler' %}" style="text-decoration:none">Alquileres</a></span> Monoambientes</h1>
+                    <h1><a href="{% url 'alquiler' %}" style="text-decoration:none">Alquileres</a></span> Monoambientes </h1>
                 </div>
             </div>
         </div>
@@ -40,8 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-                    <h2>Encontra en esta sección todos nuestros Monoambientes disponibles!</h2>
-
+                    <h2>Encontra en esta sección todos nuestros Departamentos disponibles!</h2>
                 </div>
 
                 <!--  Carousel -->
@@ -60,22 +58,23 @@
                                 </div>
 
                             </div>
-                            <a href="{% url 'monoambiente_details_alqui' monoambiente.id  %}" class="tag"> Ver Propiedad</a>
+                            <a href="{% url 'monoambiente_details_alquis' monoambiente.id  %}" class="tag"> Ver Propiedad</a>
                         </figure>
 
                         <div class="fh5co-property-innter">
 
-                            <h3><a href="{% url 'monoambiente_details_alqui' monoambiente.id  %}">{{monoambiente.title}}</a></h3>
+                            <h3><a href="{% url 'monoambiente_details_alquis' monoambiente.id  %}">{{monoambiente.title}}</a></h3>
 
                             <div class="price-status">
                                 <span class="per">$</span><span class="price">{{monoambiente.price}}<span class="per">/Mes</span></span>
                             </div>
 
-
-                            <p>{{monoambiente.content}} </p>
+                            <div class="property-content-wrapper">
+                                <p>{{monoambiente.content}} </p>
+                            </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{monoambiente.baños}}</strong>Baño</span>
+                            <span><strong>{{monoambiente.baños}}</strong> Baño  <i class="fa fa-bath"></i></span>
                         </p>
                     </div>
                 </div>

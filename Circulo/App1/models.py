@@ -18,11 +18,13 @@ class Category(models.Model):
     
 class PostInicio(models.Model):
     disponibilidad=(('Venta','Venta'),('Alquiler','Alquiler'))
+    moneda=(('U$S','U$S'),('$','$'))
     title=  models.CharField(max_length=200, verbose_name="Titulo ")
     disponibilidad=models.CharField(max_length=100, choices=disponibilidad)
+    moneda=models.CharField(max_length=100, choices=moneda, default = "$")
     content = models.TextField(verbose_name="Contenido",max_length=400,)
     imagen = models.ImageField(verbose_name="Imagen", blank =True ,null =True,upload_to="Inicio")
-    price = models.IntegerField(verbose_name="Precio")
+    price = models.FloatField(verbose_name="Precio")
     ambientes = models.IntegerField(verbose_name="Dormitorios o Ambientes",blank =True ,null =True)
     superficie= models.IntegerField(verbose_name="Superficie (locales u oficinas)",blank =True ,null =True)
     baños= models.IntegerField(verbose_name="Baños",blank =True ,null =True)

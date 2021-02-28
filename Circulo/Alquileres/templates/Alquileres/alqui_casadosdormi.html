@@ -5,13 +5,15 @@
             <div class="row">
                 <div class="header-inner">
                     <span class="rounded-circle">
+				  		<span class="rounded-circle">
 				  <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
 				  </span>
+                    </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'alqui_casatresdormi' %}"> 3 Dormitorios</a></li>
-                            <li><a href="{% url 'alqui_casacuatrodormi' %}"> 4 Dormitorios</a></li>
-                            <li><a href="{% url 'alqui_casacincodormi' %}"> 5 Dormitorios</a></li>
+                            <li><a href="{% url 'alqui_casatresdormi' %}">Casas 3 Dormitorios </a></li>
+                            <li><a href="{% url 'alqui_casacuatrodormi' %}">Casas 4 Dormitorios </a></li>
+                            <li><a href="{% url 'alqui_casacincodormi' %}">Casas 5 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
                         </ul>
@@ -37,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-                    <h2>Encontra en esta sección todas nuestras Casas disponibles!</h2>
+                    <h2>Encontra en esta sección todos nuestros Departamentos disponibles!</h2>
                 </div>
 
                 <!--  Carousel -->
@@ -67,11 +69,12 @@
                                 <span class="per">$</span><span class="price">{{casadosdormi.price}}<span class="per">/Mes</span></span>
                             </div>
 
-
-                            <p>{{casadosdormi.content}} </p>
+                            <div class="property-content-wrapper">
+                                <p>{{casadosdormi.content}} </p>
+                            </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{casadosdormi.baños}}</strong> Baños</span> <span><strong>{{casadosdormi.ambientes}} </strong> Dormitorios</i></span>
+                            <span><strong>{{casadosdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{casadosdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
                         </p>
                     </div>
                 </div>

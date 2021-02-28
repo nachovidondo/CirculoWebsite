@@ -22,17 +22,17 @@ def venta_dptotresdormi(request):
 def venta_casas(request):
     return render(request,'Venta/venta_casas.html')
 def venta_casadosdormi(request):
-    casadosdormis=Post.objects.filter(categories=Category.objects.get(nombre ="Casas 2 Dormitorios"))
-    return render(request,'Venta/venta_casadosdormi.html',{'casadosdormis':casadosdormis})
+    venta_casadosdormis=Post.objects.filter(categories=Category.objects.get(nombre ="Casas 2 Dormitorios"))
+    return render(request,'Venta/venta_casadosdormi.html',{'venta_casadosdormis':venta_casadosdormis})
 def venta_casatresdormi(request):
-    casatresdormis=Post.objects.filter(categories=Category.objects.get(nombre = "Casas 3 Dormitorios"))
-    return render(request,'Venta/venta_casatresdormi.html',{ 'casatresdormis':casatresdormis})
+    venta_casatresdormis=Post.objects.filter(categories=Category.objects.get(nombre = "Casas 3 Dormitorios"))
+    return render(request,'Venta/venta_casatresdormi.html',{ 'venta_casatresdormis':venta_casatresdormis})
 def venta_casacuatrodormi(request):
-    casacuatrodormis=Post.objects.filter(categories=Category.objects.get(nombre ="Casas 4 Dormitorios"))
-    return render(request,'Venta/venta_casacuatrodormi.html',{ 'casacuatrodormis':casacuatrodormis})
+    venta_casacuatrodormis=Post.objects.filter(categories=Category.objects.get(nombre ="Casas 4 Dormitorios"))
+    return render(request,'Venta/venta_casacuatrodormi.html',{ 'venta_casacuatrodormis':venta_casacuatrodormis})
 def venta_casacincodormi(request):
-    casacincodormis=Post.objects.filter(categories=Category.objects.get(nombre = "Casas 5 Dormitorios"))
-    return render(request,'Venta/venta_casacincodormi.html',{ 'casacincodormis':casacincodormis})
+    venta_casacincodormis=Post.objects.filter(categories=Category.objects.get(nombre = "Casas 5 Dormitorios"))
+    return render(request,'Venta/venta_casacincodormi.html',{ 'venta_casacincodormis':venta_casacincodormis})
 def venta_locales(request):
     locales= Post.objects.filter(categories=Category.objects.get(nombre="Locales"))
     return render(request,'Venta/venta_locales.html',{'locales': locales})
@@ -45,15 +45,15 @@ def venta_terrenos(request):
 def venta_duplex(request):
     return render(request,'Venta/venta_duplex.html')
 def venta_duplexdosdormi(request):
-    duplexdosdormis= Post.objects.filter(categories=Category.objects.get(nombre="Duplex 2 Dormitorios"))
-    return render(request,'Venta/venta_duplexdosdormi.html',{'duplexdosdormis': duplexdosdormis})
+    venta_duplexdosdormis= Post.objects.filter(categories=Category.objects.get(nombre="Duplex 2 Dormitorios"))
+    return render(request,'Venta/venta_duplexdosdormi.html',{'venta_duplexdosdormis': venta_duplexdosdormis})
 def venta_duplextresdormi(request):
-    duplextresdormis= Post.objects.filter(categories=Category.objects.get(nombre="Duplex 3 Dormitorios"))
-    return render(request,'Venta/venta_duplextresdormi.html',{'duplextresdormis': duplextresdormis})
+    venta_duplextresdormis= Post.objects.filter(categories=Category.objects.get(nombre="Duplex 3 Dormitorios"))
+    return render(request,'Venta/venta_duplextresdormi.html',{'venta_duplextresdormis': venta_duplextresdormis})
 
-def detail(request, post_id):
-    details = get_object_or_404(Post, pk = post_id)
-    return render (request,'Venta/articulos.html',{'details' : details})
+def articulos_venta(request, post_id):
+    articulos_venta = get_object_or_404(Post, pk = post_id)
+    return render (request,'Venta/articulos_venta.html',{'articulos_venta' : articulos_venta})
 def ofice_local_details_ventas(request, post_id):
     ofice_local_details_ventas = get_object_or_404(Post, pk = post_id)
     return render (request,'Venta/ofice_local_details_ventas.html',{'ofice_local_details_ventas' : ofice_local_details_ventas})

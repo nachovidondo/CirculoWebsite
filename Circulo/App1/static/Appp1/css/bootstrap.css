@@ -106,6 +106,13 @@
         border: 0;
     }
     
+    .img1 {}
+    
+    img {
+        vertical-align: middle;
+        padding: 0px;
+    }
+    
     svg:not(:root) {
         overflow: hidden;
     }
@@ -349,11 +356,6 @@
     
     figure {
         margin: 0;
-    }
-    
-    img {
-        vertical-align: middle;
-        padding: 0px;
     }
     
     .img-responsive {
@@ -2754,7 +2756,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:focus,
 .btn-primary.focus {
     color: #fff;
-    background-color: #286090;
+    background-color: #;
     border-color: #122b40;
 }
 .btn-primary:hover {
@@ -2766,8 +2768,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #286090;
-    border-color: #204d74;
+    background-color: #D61616;
+    border-color: #D61616;
 }
 .btn-primary:active:hover,
 .btn-primary:active:focus,
@@ -3244,7 +3246,7 @@ tbody.collapse.in {
     color: #fff;
     text-decoration: none;
     outline: 0;
-    background-color: #337ab7;
+    background-color: #d61616;
 }
 .dropdown-menu>.disabled>a,
 .dropdown-menu>.disabled>a:hover,
@@ -5924,8 +5926,8 @@ button.close {
 .carousel-inner>.item>img,
 .carousel-inner>.item>a>img {
     display: block;
-    width: 300px;
-    height: 250px;
+    width: 400px;
+    height: 350px;
     line-height: 1;
 }
 @media all and (transform-3d),

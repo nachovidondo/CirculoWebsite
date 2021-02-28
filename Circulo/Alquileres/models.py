@@ -18,8 +18,12 @@ class Category(models.Model):
     
     
 class PostAlquiler(models.Model):
+    balcon=(('Con Balcon','Con Balcon'),('',''))
+    balcon = models.CharField(max_length=100, choices = balcon,default="Con Balcon", null=True, blank=True)
+    frente= (('Externo','Externo'),('Contrafrente','Contrafrente'))
+    frente = models.CharField(max_length=100,choices=frente, default = "Externo")
     title=  models.CharField(max_length=200, verbose_name="Titulo ")
-    content = models.TextField(verbose_name="Contenido",max_length=400,)
+    content = models.TextField(verbose_name="Contenido",max_length=800,)
     imagen = models.ImageField(verbose_name="Imagen", blank =True ,null =True,upload_to="Alquileres")
     price = models.IntegerField(verbose_name="Precio")
     ambientes = models.IntegerField(verbose_name="Dormitorios o Ambientes",blank =True ,null =True)

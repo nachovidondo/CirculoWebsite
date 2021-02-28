@@ -4,12 +4,16 @@
         <div class="container">
             <div class="row">
                 <div class="header-inner">
-                    <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+                    <span class="rounded-circle">
+				  		<span class="rounded-circle">
+				  <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+				  </span>
+                    </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'venta_casatresdormi' %}"> 3 Dormitorios</a></li>
-                            <li><a href="{% url 'venta_casacuatrodormi' %}"> 4 Dormitorios</a></li>
-                            <li><a href="{% url 'venta_casacincodormi' %}"> 5 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_casatresdormi' %}">Casas 3 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_casacuatrodormi' %}">Casas 4 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_casacuatrodormi' %}">Casas 5 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
                         </ul>
@@ -26,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box">
-                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none"><span class="colored">Ventas</a> </span>Casas 2 Dormitorios </h1>
+                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none">Ventas</a></span> Casas 2 Dormitorio</h1>
                 </div>
             </div>
         </div>
@@ -35,17 +39,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-                    <h2>Encontra en esta sección todas nuestras Casas disponibles!</h2>
+                    <h2>Encontra en esta sección todos nuestros Departamentos disponibles!</h2>
                 </div>
 
                 <!--  Carousel -->
-                {% for casadosdormi in casadosdormis %}
+                {% for venta_casadosdormi in venta_casadosdormis %}
                 <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
                     <div class="fh5co-property">
                         <figure>
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    {% for pi in casadosdormi.postimagenes_set.all %}
+                                    {% for pi in venta_casadosdormi.postimagenes_set.all %}
                                     <div class="item {% if forloop.first %} active {% endif %}">
                                         <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
                                     </div>
@@ -54,22 +58,23 @@
                                 </div>
 
                             </div>
-                            <a href="{% url 'detail' casadosdormi.id  %}" class="tag"> Ver Propiedad</a>
+                            <a href="{% url 'articulos_venta' venta_casadosdormi.id  %}" class="tag"> Ver Propiedad</a>
                         </figure>
 
                         <div class="fh5co-property-innter">
 
-                            <h3><a href="{% url 'detail' casadosdormi.id  %}">{{casadosdormi.title}}</a></h3>
+                            <h3><a href="{% url 'articulos_venta' venta_casadosdormi.id  %}">{{venta_casadosdormi.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">$</span><span class="price">{{casadosdormi.price}}<span class="per">/Mes</span></span>
+                                <span class="per">$</span><span class="price">{{venta_casadosdormi.price}}<span class="per">/Mes</span></span>
                             </div>
 
-
-                            <p>{{casadosdormi.content}} </p>
+                            <div class="property-content-wrapper">
+                                <p>{{venta_casadosdormi.content}} </p>
+                            </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{casadosdormi.baños}}</strong> Baños</span> <span><strong>{{casadosdormi.ambientes}} </strong> Dormitorios</i></span>
+                            <span><strong>{{venta_casadosdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{venta_casadosdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
                         </p>
                     </div>
                 </div>

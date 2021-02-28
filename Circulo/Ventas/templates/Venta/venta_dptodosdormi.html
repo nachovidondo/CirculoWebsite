@@ -4,12 +4,15 @@
         <div class="container">
             <div class="row">
                 <div class="header-inner">
-                    <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+                    <span class="rounded-circle">
+				  		<span class="rounded-circle">
+				  <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+				  </span>
+                    </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url  'venta_monoambientes' %} ">Monoambientes</a></li>
-                            <li><a href="{% url 'venta_dptoundormi' %}">1 Dormitorio</a></li>
-
+                            <li><a href="{% url 'venta_monoambientes' %}">Monoambientes</a></li>
+                            <li><a href="{% url 'venta_dptoundormi' %}">1 Dormitorios</a></li>
                             <li><a href="{% url 'venta_dptotresdormi' %}">3 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
@@ -27,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box">
-                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none"><span class="colored">Ventas</a> </span>Departamento 2 Dormitorios </h1>
+                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none">Ventas</a></span> 2 Dormitorios</h1>
                 </div>
             </div>
         </div>
@@ -55,22 +58,23 @@
                                 </div>
 
                             </div>
-                            <a href="{% url 'detail' dptodosdormi.id  %}" class="tag"> Ver Propiedad</a>
+                            <a href="{% url 'articulos_venta' dptodosdormi.id  %}" class="tag"> Ver Propiedad</a>
                         </figure>
 
                         <div class="fh5co-property-innter">
 
-                            <h3><a href="{% url 'detail' dptodosdormi.id  %}">{{dptodosdormi.title}}</a></h3>
+                            <h3><a href="{% url 'articulos_venta' dptodosdormi.id  %}">{{dptodosdormi.title}}</a></h3>
 
                             <div class="price-status">
                                 <span class="per">$</span><span class="price">{{dptodosdormi.price}}<span class="per">/Mes</span></span>
                             </div>
 
-
-                            <p>{{dptodosdormi.content}} </p>
+                            <div class="property-content-wrapper">
+                                <p>{{dptodosdormi.content}} </p>
+                            </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{dptodosdormi.baños}}</strong>Baños</span> <span><strong>{{dptodosdormi.ambientes}} </strong> Dormitorios</i></span>
+                            <span><strong>{{dptodosdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{dptodosdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
                         </p>
                     </div>
                 </div>

@@ -5,16 +5,16 @@
             <div class="row">
                 <div class="header-inner">
                     <span class="rounded-circle">
-				 		<span class="rounded-circle">
+				  		<span class="rounded-circle">
 				  <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
 				  </span>
                     </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'alqui_casas' %}">Casas</a></li>
-                            <li><a href="{% url  'alqui_locales' %} ">Locales</a></li>
-                            <li><a href="{% url 'alqui_duplex' %}">Duplex</a></li>
-                            <li><a href="{% url 'alqui_departamentos' %}">Departamentos</a></li>
+                            <li><a href="{% url 'alqui_casas' %}">Casas </a></li>
+                            <li><a href="{% url 'alqui_departamentos' %}">Departamentos </a></li>
+                            <li><a href="{% url 'alqui_locales' %}"> Locales </a></li>
+
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
                         </ul>
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box">
-                    <h1><a href="{% url 'alquiler' %}" style="text-decoration:none">Alquileres</a></span> Oficinas</h1>
+                    <h1><a href="{% url 'alquiler' %}" style="text-decoration:none">Alquileres</a></span> Oficinas </h1>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-                    <h2>Encontra en esta sección todas nuestras Oficinas disponibles!</h2>
+                    <h2>Encontra en esta sección todos nuestros Oficinas disponibles!</h2>
                 </div>
 
                 <!--  Carousel -->
@@ -59,22 +59,23 @@
                                 </div>
 
                             </div>
-                            <a href="{% url 'ofice_local_details_alqui' oficina.id  %}" class="tag"> Ver Propiedad</a>
+                            <a href="{% url 'ofice_local_details_alquis' oficina.id  %}" class="tag"> Ver Propiedad</a>
                         </figure>
 
                         <div class="fh5co-property-innter">
 
-                            <h3><a href="{% url 'ofice_local_details_alqui' oficina.id  %}">{{oficina.title}}</a></h3>
+                            <h3><a href="{% url 'ofice_local_details_alquis' oficina.id  %}">{{oficina.title}}</a></h3>
 
                             <div class="price-status">
                                 <span class="per">$</span><span class="price">{{oficina.price}}<span class="per">/Mes</span></span>
                             </div>
 
-
-                            <p>{{oficina.content}} </p>
+                            <div class="property-content-wrapper">
+                                <p>{{oficina.content}} </p>
+                            </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{oficina.baños}}</strong>  Baños</span> <span><strong>{{oficina.ambientes}}  </strong>   m2 de Superficie </span>
+                            <span><strong>{{oficina.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{oficina.ambientes}}  </strong>   m2 de Superficie </span>
                         </p>
                     </div>
                 </div>

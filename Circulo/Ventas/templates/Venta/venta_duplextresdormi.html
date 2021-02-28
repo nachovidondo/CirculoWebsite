@@ -4,11 +4,14 @@
         <div class="container">
             <div class="row">
                 <div class="header-inner">
-                    <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+                    <span class="rounded-circle">
+				  		<span class="rounded-circle">
+				  <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+				  </span>
+                    </span>
                     <nav role="navigation">
                         <ul>
-
-                            <li><a href="{% url 'venta_duplextresdormi' %}">Duplex 2 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_duplexdosdormi' %}">Duplex 2 Dormitorios</a></li>
 
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
@@ -26,7 +29,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box">
-                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none"><span class="colored">Ventas</a> </span>Duplex 2 Dormitorios </h1>
+                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none">Ventas</a></span> Duplex 3 Dormitorios</h1>
                 </div>
             </div>
         </div>
@@ -35,18 +38,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-                    <h2>Encontra aqui tu futura Casa </h2>
-                    <p>Nuestro servicio esta abocado a la satifaccion de nuestros clientes </p>
+                    <h2>Encontra en esta sección todos nuestros Departamentos disponibles!</h2>
                 </div>
 
                 <!--  Carousel -->
-                {% for duplextresdormi in duplextresdormis %}
+                {% for venta_duplextresdormi in venta_duplextresdormis %}
                 <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
                     <div class="fh5co-property">
                         <figure>
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    {% for pi in duplextresdormi.postimagenes_set.all %}
+                                    {% for pi in venta_duplextresdormi.postimagenes_set.all %}
                                     <div class="item {% if forloop.first %} active {% endif %}">
                                         <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
                                     </div>
@@ -55,22 +57,23 @@
                                 </div>
 
                             </div>
-                            <a href="{% url 'detail' duplextresdormi.id  %}" class="tag"> Ver Propiedad</a>
+                            <a href="{% url 'articulos_venta' venta_duplextresdormi.id  %}" class="tag"> Ver Propiedad</a>
                         </figure>
 
                         <div class="fh5co-property-innter">
 
-                            <h3><a href="{% url 'detail' duplextresdormi.id  %}">{{duplextresdormi.title}}</a></h3>
+                            <h3><a href="{% url 'articulos_venta' venta_duplextresdormi.id  %}">{{venta_duplextresdormi.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">$</span><span class="price">{{duplextresdormi.price}}<span class="per">/Mes</span></span>
+                                <span class="per">$</span><span class="price">{{venta_duplextresdormi.price}}<span class="per">/Mes</span></span>
                             </div>
 
-
-                            <p>{{duplextresdormi.content}} </p>
+                            <div class="property-content-wrapper">
+                                <p>{{venta_duplextresdormi.content}} </p>
+                            </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{duplextresdormi.baños}}</strong>Baños</span> <span><strong>{{duplextresdormi.ambientes}} </strong> Dormitorios</i></span>
+                            <span><strong>{{venta_duplextresdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{venta_duplextresdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
                         </p>
                     </div>
                 </div>

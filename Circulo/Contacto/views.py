@@ -30,4 +30,7 @@ def contacto(request):
 
 def automatic(request):
     return render (request, 'Contacto1/automatic.html') 
+def tasaciones(request):
+    return render(request, 'Contacto1/tasaciones.html')
+
 
