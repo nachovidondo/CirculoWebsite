@@ -84,14 +84,20 @@
                             <p>{{ofice_local_details_alquis.content}} </p>
                         </div>
                         <p class="fh5co-property-specification">
+
+                            <span><strong>{{ofice_local_details_alquis.ambientes}}  </strong>   m2 de Superficie </span>
                             <span>
+                                {% if ofice_local_details_alquis.plantas %}
+                                <strong>{{ofice_local_details_alquis.plantas}}</strong>
+                                
+                                <span> Plantas</span> {% endif %}
+                            </span><span>
                                 <strong>
                                 {{ofice_local_details_alquis.baños}}
-                                </strong> 
-                                Baños  
+                                </strong> Baños
                                 <i class="fa fa-bath"></i>
-                            </span>
-                            <span><strong>{{ofice_local_details_alquis.ambientes}}  </strong>   m2 de Superficie </span>
+                                </span>
+
                         </p>
                     </div>
                 </div>

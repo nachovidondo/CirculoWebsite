@@ -78,12 +78,15 @@
                         <div class="fh5co-property-innter">
                             <h3><a href="#">{{monoambiente_details_ventas.title}}</a></h3>
                             <div class="price-status">
-                                <span class="per">$</span><span class="price">{{monoambiente_details_ventas.price}}<span class="per">/Mes</span></span>
+                                <span class="per">U$S</span><span class="price">{{monoambiente_details_ventas.price}}</span>
                             </div>
 
                             <p>{{monoambiente_details_ventas.content}} </p>
                         </div>
                         <p class="fh5co-property-specification">
+
+                            <span>{{monoambiente_details_ventas.frente}}</span>
+                            <span>   {% if monoambiente_details_ventas.balcon %} {{monoambiente_details_ventas.balcon}} {% endif %} </span>
                             <span>
                                 <strong>
                                 {{monoambiente_details_ventas.baños}}

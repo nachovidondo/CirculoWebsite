@@ -11,7 +11,7 @@
                     </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'venta_duplextresdormi' %}">Duplex 3 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_duplextresdormi' %}">Duplex 3 Dormitorios </a></li>
 
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-                    <h2>Encontra en esta sección todos nuestros Departamentos disponibles!</h2>
+                    <h2>Encontra en esta sección todos nuestras Duplex disponibles!</h2>
                 </div>
 
                 <!--  Carousel -->
@@ -65,7 +65,7 @@
                             <h3><a href="{% url 'articulos_venta' venta_duplexdosdormi.id  %}">{{venta_duplexdosdormi.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">$</span><span class="price">{{venta_duplexdosdormi.price}}<span class="per">/Mes</span></span>
+                                <span class="per">U$S </span><span class="price">{{venta_duplexdosdormi.price}}<span class="per"></span></span>
                             </div>
 
                             <div class="property-content-wrapper">
@@ -73,7 +73,9 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{venta_duplexdosdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{venta_duplexdosdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
+                            <span><strong>{{venta_duplexdosdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><span><strong>{{venta_duplexdosdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>
+                            <br><span>{{venta_duplexdosdormi.frente}}</span>
+                            <span>   {% if venta_duplexdosdormi.balcon %} {{venta_duplexdosdormi.balcon}} {% endif %} </span>
                         </p>
                     </div>
                 </div>

@@ -11,7 +11,9 @@
                     </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'alqui_duplextresdormi' %}">Duplex 2 Dormitorios</a></li>
+                            <li><a href="{% url 'alqui_duplexdosdormi' %}">Duplex 2 Dormitorios </a></li>
+
+
 
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
@@ -73,7 +75,9 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{duplextresdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{duplextresdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
+                            <span><strong>{{duplextresdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><span><strong>{{duplextresdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>
+                            <br><span>{{duplextresdormi.frente}}</span>
+                            <span>   {% if duplextresdormi.balcon %} {{duplextresdormi.balcon}} {% endif %} </span>
                         </p>
                     </div>
                 </div>

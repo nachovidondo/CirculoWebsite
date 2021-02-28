@@ -65,7 +65,7 @@
                             <h3><a href="{% url 'articulos_venta' venta_duplextresdormi.id  %}">{{venta_duplextresdormi.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">$</span><span class="price">{{venta_duplextresdormi.price}}<span class="per">/Mes</span></span>
+                                <span class="per">U$S</span><span class="price">{{venta_duplextresdormi.price}}</span>
                             </div>
 
                             <div class="property-content-wrapper">
@@ -73,7 +73,9 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{venta_duplextresdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{venta_duplextresdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
+                            <span><strong>{{venta_duplextresdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><span><strong>{{venta_duplextresdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>
+                            <br><span>{{venta_duplextresdormi.frente}}</span>
+                            <span>   {% if venta_duplextresdormi.balcon %} {{venta_duplextresdormi.balcon}} {% endif %} </span>
                         </p>
                     </div>
                 </div>

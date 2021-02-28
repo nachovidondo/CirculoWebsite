@@ -11,9 +11,10 @@
                     </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'alqui_monoambientes' %}">Monoambientes</a></li>
-                            <li><a href="{% url 'alqui_dptodosdormi' %}">2 Dormitorios</a></li>
-                            <li><a href="{% url 'alqui_dptotresdormi' %}">3 Dormitorios</a></li>
+                            <li><a href="{% url 'alqui_monoambientes' %}">Monoambientes </a></li>
+                            <li><a href="{% url 'alqui_dptodosdormi' %}">Departamentos 2 Dormitorios</a></li>
+
+                            <li><a href="{% url 'alqui_dptotresdormi' %}">Departamentos 3 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
                         </ul>
@@ -30,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box">
-                    <h1><a href="{% url 'alquiler' %}" style="text-decoration:none">Alquileres</a></span> 1 Dormitorio</h1>
+                    <h1><a href="{% url 'alquiler' %}" style="text-decoration:none">Alquileres</a></span> Departamentos 1 Dormitorio</h1>
                 </div>
             </div>
         </div>
@@ -74,7 +75,9 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{dptoundormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{dptoundormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
+                            <span><strong>{{dptoundormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><span><strong>{{dptoundormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>
+                            <br><span>{{dptoundormi.frente}}</span>
+                            <span>   {% if dptoundormi.balcon %} {{dptoundormi.balcon}} {% endif %} </span>
                         </p>
                     </div>
                 </div>

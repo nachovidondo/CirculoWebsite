@@ -12,7 +12,7 @@
                     <nav role="navigation">
                         <ul>
                             <li><a href="{% url 'alqui_casadosdormi' %}">Casas 2 Dormitorios </a></li>
-                            <li><a href="{% url 'alqui_casacincodormi' %}">Casas 3 Dormitorios </a></li>
+                            <li><a href="{% url 'alqui_casatresdormi' %}">Casas 3 Dormitorios </a></li>
                             <li><a href="{% url 'alqui_casacuatrodormi' %}">Casas 4 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
@@ -74,7 +74,8 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{casacincodormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{casacincodormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><br><span>{{casacincodormi.frente}}</span>
+                            <span><strong>{{casacincodormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><span><strong>{{casacincodormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>
+                            <br><span>{{casacincodormi.frente}}</span>
                             <span>   {% if casacincodormi.balcon %} {{casacincodormi.balcon}} {% endif %} </span>
                         </p>
                     </div>

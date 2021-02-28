@@ -11,9 +11,9 @@
                     </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'alqui_dptoundormi' %}">1 Dormitorio </a></li>
-                            <li><a href="{% url 'alqui_dptodosdormi' %}">2 Dormitorios</a></li>
-                            <li><a href="{% url 'alqui_dptotresdormi' %}">3 Dormitorios</a></li>
+                            <li><a href="{% url 'alqui_dptoundormi' %}">Departamentos 1 Dormitorio </a></li>
+                            <li><a href="{% url 'alqui_dptodosdormi' %}">Departamentos 2 Dormitorios</a></li>
+                            <li><a href="{% url 'alqui_dptotresdormi' %}"> Departamentos 3 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
                         </ul>
@@ -74,6 +74,13 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
+                            <span>{{monoambiente.frente}}</span>
+                            <span>{% if monoambiente.balcon %}
+                                {{monoambiente.balcon}}
+                                {% endif %}
+
+                            </span>
+
                             <span><strong>{{monoambiente.baños}}</strong> Baño  <i class="fa fa-bath"></i></span>
                         </p>
                     </div>

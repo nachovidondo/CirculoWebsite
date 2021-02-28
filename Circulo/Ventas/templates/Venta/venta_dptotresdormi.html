@@ -11,9 +11,9 @@
                     </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'venta_monoambientes' %}">Monoambientes</a></li>
-                            <li><a href="{% url 'venta_dptoundormi' %}">1 Dormitorios</a></li>
-                            <li><a href="{% url 'venta_dptodosdormi' %}">2 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_monoambientes' %}">Monoambientes </a></li>
+                            <li><a href="{% url 'venta_dptoundormi' %}">Departamentos 1 Dormitorios </a></li>
+                            <li><a href="{% url 'venta_dptodosdormi' %}">Departamentos 2 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
                         </ul>
@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box">
-                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none">Ventas   </a></span> 3 Dormitorios</h1>
+                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none">Ventas</a></span> Departamentos 3 Dormitorios</h1>
                 </div>
             </div>
         </div>
@@ -43,13 +43,13 @@
                 </div>
 
                 <!--  Carousel -->
-                {% for dptotresdormi in dptotresdormis %}
+                {% for venta_dptotresdormi in venta_dptotresdormis %}
                 <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
                     <div class="fh5co-property">
                         <figure>
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    {% for pi in dptotresdormi.postimagenes_set.all %}
+                                    {% for pi in venta_dptotresdormi.postimagenes_set.all %}
                                     <div class="item {% if forloop.first %} active {% endif %}">
                                         <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
                                     </div>
@@ -58,23 +58,25 @@
                                 </div>
 
                             </div>
-                            <a href="{% url 'articulos_venta' dptotresdormi.id  %}" class="tag"> Ver Propiedad</a>
+                            <a href="{% url 'articulos_venta' venta_dptotresdormi.id  %}" class="tag"> Ver Propiedad</a>
                         </figure>
 
                         <div class="fh5co-property-innter">
 
-                            <h3><a href="{% url 'articulos_venta' dptotresdormi.id  %}">{{dptotresdormi.title}}</a></h3>
+                            <h3><a href="{% url 'articulos_venta' venta_dptotresdormi.id  %}">{{venta_dptotresdormi.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">$</span><span class="price">{{dptotresdormi.price}}<span class="per">/Mes</span></span>
+                                <span class="per">U$S </span><span class="price">{{venta_dptotresdormi.price}}<span class="per"></span></span>
                             </div>
 
                             <div class="property-content-wrapper">
-                                <p>{{dptotresdormi.content}} </p>
+                                <p>{{venta_dptotresdormi.content}} </p>
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{dptotresdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{dptotresdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
+                            <span><strong>{{venta_dptotresdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><span><strong>{{venta_dptotresdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>
+                            <br><span>{{venta_dptotresdormi.frente}}</span>
+                            <span>   {% if venta_dptotresdormi.balcon %} {{venta_dptotresdormi.balcon}} {% endif %} </span>
                         </p>
                     </div>
                 </div>

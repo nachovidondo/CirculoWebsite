@@ -11,9 +11,9 @@
                     </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'venta_dptoundormi' %}">1 Dormitorio </a></li>
-                            <li><a href="{% url 'venta_dptodosdormi' %}">2 Dormitorios</a></li>
-                            <li><a href="{% url 'venta_dptotresdormi' %}">3 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_dptoundormi' %}">Departamentos 1 Dormitorio </a></li>
+                            <li><a href="{% url 'venta_dptodosdormi' %}">Departamentos 2 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_dptotresdormi' %}"> Departamentos 3 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
                         </ul>
@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 animate-box">
-                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none">Ventas</a></span> Monoambientes </h1>
+                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none">Ventas </a></span> Monoambientes </h1>
                 </div>
             </div>
         </div>
@@ -43,13 +43,13 @@
                 </div>
 
                 <!--  Carousel -->
-                {% for monoambiente in monoambientes %}
+                {% for venta_monoambiente in venta_monoambientes %}
                 <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
                     <div class="fh5co-property">
                         <figure>
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    {% for pi in monoambiente.postimagenes_set.all %}
+                                    {% for pi in venta_monoambiente.postimagenes_set.all %}
                                     <div class="item {% if forloop.first %} active {% endif %}">
                                         <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
                                     </div>
@@ -58,23 +58,30 @@
                                 </div>
 
                             </div>
-                            <a href="{% url 'monoambiente_details_ventas' monoambiente.id  %}" class="tag"> Ver Propiedad</a>
+                            <a href="{% url 'monoambiente_details_ventas' venta_monoambiente.id  %}" class="tag"> Ver Propiedad</a>
                         </figure>
 
                         <div class="fh5co-property-innter">
 
-                            <h3><a href="{% url 'monoambiente_details_ventas' monoambiente.id  %}">{{monoambiente.title}}</a></h3>
+                            <h3><a href="{% url 'monoambiente_details_ventas' venta_monoambiente.id  %}">{{venta_monoambiente.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">$</span><span class="price">{{monoambiente.price}}<span class="per">/Mes</span></span>
+                                <span class="per">$</span><span class="price">{{venta_monoambiente.price}}<span class="per">/Mes</span></span>
                             </div>
 
                             <div class="property-content-wrapper">
-                                <p>{{monoambiente.content}} </p>
+                                <p>{{venta_monoambiente.content}} </p>
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{monoambiente.baños}}</strong> Baño  <i class="fa fa-bath"></i></span>
+                            <span>{{venta_monoambiente.frente}}</span>
+                            <span>{% if venta_monoambiente.balcon %}
+                                {{venta_monoambiente.balcon}}
+                                {% endif %}
+
+                            </span>
+
+                            <span><strong>{{venta_monoambiente.baños}}</strong> Baño  <i class="fa fa-bath"></i></span>
                         </p>
                     </div>
                 </div>

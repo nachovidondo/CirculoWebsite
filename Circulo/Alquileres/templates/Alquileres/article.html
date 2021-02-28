@@ -84,6 +84,12 @@
                             <p>{{articles.content}} </p>
                         </div>
                         <p class="fh5co-property-specification">
+
+                            <span>
+                                <strong>{{articles.ambientes}} </strong> 
+                                Dormitorios
+                                <i class="fa fa-bed"></i>
+                            </span>
                             <span>
                                 <strong>
                                 {{articles.baños}}
@@ -91,11 +97,8 @@
                                 Baños  
                                 <i class="fa fa-bath"></i>
                             </span>
-                            <span>
-                                <strong>{{articles.ambientes}} </strong> 
-                                Dormitorios
-                                <i class="fa fa-bed"></i>
-                            </span>
+                            <span>{{articles.frente}}</span>
+                            <span>   {% if articles.balcon %} {{articles.balcon}} {% endif %} </span>
                         </p>
                     </div>
                 </div>

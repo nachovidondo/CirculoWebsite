@@ -26,7 +26,7 @@ class Post(models.Model):
     imagen = models.ImageField(verbose_name="Imagen", blank =True ,null =True,upload_to="Ventas")
     price = models.IntegerField(verbose_name="Precio")
     ambientes = models.IntegerField(verbose_name="Dormitorios o Ambientes",blank =True ,null =True)
-    superficie= models.IntegerField(verbose_name="Superficie",blank =True,null =True )
+    superficie= models.FloatField(verbose_name="Superficie",blank =True,null =True )
     baños= models.IntegerField(verbose_name="Baños",blank = True,null =True)
     plantas= models.IntegerField(verbose_name="Plantas", blank = True,null =True)
     autor = models.ForeignKey(User,verbose_name="Autor", on_delete=models.CASCADE)

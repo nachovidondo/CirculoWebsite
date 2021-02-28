@@ -11,9 +11,9 @@
                     </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'venta_casadosdormi' %}">Casas 2 Dormitorios</a></li>
-                            <li><a href="{% url 'venta_casatresdormi' %}">Casas 3 Dormitorios</a></li>
-                            <li><a href="{% url 'venta_casacuatrodormi' %}">Casas 5 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_casadosdormi' %}">Casas 2 Dormitorios </a></li>
+                            <li><a href="{% url 'venta_casatresdormi' %}">Casas 3 Dormitorios </a></li>
+                            <li><a href="{% url 'venta_casacincodormi' %}">Casas 5 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
                         </ul>
@@ -39,7 +39,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-                    <h2>Encontra en esta sección todos nuestros Departamentos disponibles!</h2>
+                    <h2>Encontra en esta sección todos nuestras Casas disponibles!</h2>
                 </div>
 
                 <!--  Carousel -->
@@ -66,7 +66,7 @@
                             <h3><a href="{% url 'articulos_venta' venta_casacuatrodormi.id  %}">{{venta_casacuatrodormi.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">$</span><span class="price">{{venta_casacuatrodormi.price}}<span class="per">/Mes</span></span>
+                                <span class="per">U$S </span><span class="price">{{venta_casacuatrodormi.price}}<span class="per"></span></span>
                             </div>
 
                             <div class="property-content-wrapper">
@@ -74,7 +74,9 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{venta_casacuatrodormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{venta_casacuatrodormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span>
+                            <span><strong>{{venta_casacuatrodormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><span><strong>{{venta_casacuatrodormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>
+                            <br><span>{{venta_casacuatrodormi.frente}}</span>
+                            <span>   {% if venta_casacuatrodormi.balcon %} {{venta_casacuatrodormi.balcon}} {% endif %} </span>
                         </p>
                     </div>
                 </div>
