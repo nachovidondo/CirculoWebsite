@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
   
     path('alquiler/', views.alquileres ,name ="alquiler"),
@@ -23,7 +24,7 @@ urlpatterns = [
     path('alqui_duplextresdormi/', views.alqui_duplextresdormi ,name ="alqui_duplextresdormi"),
     path('article/<int:postalquiler_id>/', views.article, name = "article"),
     path('ofice_local_details_alquis/<int:postalquiler_id>/', views.ofice_local_details_alquis, name = "ofice_local_details_alquis"),
-    path('monoambiente_details_alquis/<int:postalquiler_id>/', views.monoambiente_details_alquis, name = "monoambiente_details_alquis")
-    
+    path('monoambiente_details_alquis/<int:postalquiler_id>/', views.monoambiente_details_alquis, name = "monoambiente_details_alquis"),
+
 
 ]

@@ -41,9 +41,7 @@ INSTALLED_APPS = [
     'App1.apps.App1Config',
     'Ventas.apps.VentasConfig',
     'Alquileres.apps.AlquileresConfig',
-    'Contacto',
-    
- 
+    'Contacto'
 
 ]
 
@@ -135,8 +133,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #Configuracion email
 EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '3a388c52c991ba'
-EMAIL_HOST_PASSWORD = 'a66e19d6ef1960'
+EMAIL_HOST_USER = 'aa1eeed60dab65'
+EMAIL_HOST_PASSWORD = '76ae5829498dbc'
 EMAIL_PORT = '2525'
 
 

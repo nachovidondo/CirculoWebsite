@@ -4,6 +4,8 @@ from django.shortcuts import render,get_object_or_404
 from .models import Category, PostAlquiler
 
 
+
+
 def alquileres(request):
     return render (request,'Alquileres/alquiler.html')
 def alqui_departamentos(request):
@@ -61,3 +63,6 @@ def ofice_local_details_alquis(request, postalquiler_id):
 def monoambiente_details_alquis(request, postalquiler_id):
     monoambiente_details_alquis = get_object_or_404(PostAlquiler, pk = postalquiler_id)
     return render (request,'Alquileres/monoambiente_details_alquis.html',{'monoambiente_details_alquis' : monoambiente_details_alquis})
+
+
+    

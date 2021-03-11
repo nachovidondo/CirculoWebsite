@@ -14,7 +14,7 @@ def contacto(request):
             mail = EmailMessage(
                 "Circulo Inmobiliario : Nuevo Mensaje de Contacto ",
                 "De {} {}\n\nEscribio:\n\n {}".format(name ,email,content),
-                "circuloinmbobiliario.com.ar", ["ignaciovidondo@hotmail.com"],
+                "circuloinmbobiliario.com.ar", ["luiscabrera@circuloin.com"],
                 reply_to = [email]
                 )
             try:
