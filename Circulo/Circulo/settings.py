@@ -127,6 +127,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = "/var/www/vps-1944930-x.dattaweb.com/static/"
 
 
+
+
 #Configuracion de  Archivos media
 MEDIA_URL= 'CIRCULO/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

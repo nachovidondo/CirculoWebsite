@@ -6,7 +6,7 @@
                 <div class="header-inner">
                     <span class="rounded-circle">
 				  		<span class="rounded-circle">
-				  <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+                            <span class="rounded-circle"><a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1_negro.png' %}" style="margin-top: 8px" width="90px" height="60px"> </img>
 				  </span>
                     </span>
                     <nav role="navigation">
@@ -35,30 +35,29 @@
             </div>
         </div>
     </div>
-    <div id="best-deal">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+    <di id="best-deal">
+        <d class="container">
+            < class="row">
+                <d class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
                     <h2>Encontra en esta sección todos nuestras Casas disponibles!</h2>
-                </div>
+</div>
 
-                <!--  Carousel -->
-                {% for venta_casacincodormi in venta_casacincodormis %}
-                <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
-                    <div class="fh5co-property">
-                        <figure>
-                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    {% for pi in venta_casacincodormi.postimagenes_set.all %}
-                                    <div class="item {% if forloop.first %} active {% endif %}">
-                                        <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
-                                    </div>
-                                    {% endfor %}
+<!--  Carousel -->
+{% for venta_casacincodormi in venta_casacincodormis %}
+<d class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
+    <di class="fh5co-property">
+        <fure>
+            < id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <d class="carousel-inner">
+                    {% for pi in venta_casacincodormi.postimagenes_set.all %} class="item {% if forloop.first %} active {% endif %}">
+                    <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
+                    </div>
+                    {% endfor %}
 
-                                </div>
+                    <v>
 
-                            </div>
-                            <a href="{% url 'articulos_venta' venta_casacincodormi.id  %}" class="tag"> Ver Propiedad</a>
+                        </div>
+                        ref="{% url 'articulos_venta' venta_casacincodormi.id %}" class="tag"> Ver Propiedad</a>
                         </figure>
 
                         <div class="fh5co-property-innter">
@@ -69,36 +68,36 @@
                                 <span class="per">U$S </span><span class="price">{{venta_casacincodormi.price}}<span class="per"></span></span>
                             </div>
 
-                            <div class="property-content-wrapper">
+                            <di class="property-content-wrapper">
                                 <p>{{venta_casacincodormi.content}} </p>
-                            </div>
                         </div>
+                        v>
                         <p class="fh5co-property-specification">
                             <span><strong>{{venta_casacincodormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><span><strong>{{venta_casacincodormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>
                             <br><span>{{venta_casacincodormi.frente}}</span>
                             <span>   {% if venta_casacincodormi.balcon %} {{venta_casacincodormi.balcon}} {% endif %} </span>
                         </p>
-                    </div>
-                </div>
+                        </div>
+                        </div>
 
-                <!-- Modal -->
-                <div class="modal fade" style='z-index: 999' id="galleryModal" data-backdrop="false" tabindex="-1" role="dialog">
+                        <!-- Modal -->
+                        <div class="modal fade" style='z-index: 999' id="galleryModal" data-backdrop="false" tabindex="-1" role="dialog">
 
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="galleryModalLabel">
-                                </h5>
+                            <di class="modal-dialog" role="document">
+                                <d class="modal-content">
+                                    < class="modal-header">
+                                        <h5 class="modal-title" id="galleryModalLabel">
+                                        </h5>
 
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                        </div>
 
                         </div>
 
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endblock %}
+                        </div>
+                        </div>
+                        {% endfor %}
+                        </div>
+                        </div>
+                        {% endblock %}

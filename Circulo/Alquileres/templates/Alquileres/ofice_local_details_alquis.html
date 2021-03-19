@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="header-inner">
-                    <a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1.png' %}" width="106px" height="60px" alt=""></a>
+                    <span class="rounded-circle"><a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1_negro.png' %}" style="margin-top: 8px" width="90px" height="60px"> </img>
                     <nav role="navigation">
                         <ul>
                             <li><a href="{% url 'alqui_casas' %}">Casas</a></li>
@@ -35,115 +35,115 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div id="best-deal">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
-                    <h2>Encontra aqui tu futuro lugar </h2>
-                    <p>Nuestro servicio esta abocado a la satifaccion de nuestros clientes </p>
-                </div>
+</div>
+<div id="best-deal">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+                <h2>Encontra aqui tu futuro lugar </h2>
+                <p>Nuestro servicio esta abocado a la satifaccion de nuestros clientes </p>
+            </div>
 
-                <!--  Carousel -->
-                <!-- AGREGAR MD 12 a todos los de clase animate-box individuales-->
-                <div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
-                    <div class="fh5co-property property-individual">
-                        <figure>
-                            <a href="#" id="available" class="tag"> Disponible </a>
+            <!--  Carousel -->
+            <!-- AGREGAR MD 12 a todos los de clase animate-box individuales-->
+            <div class="col-md-12 item-block animate-box" data-animate-effect="fadeIn">
+                <div class="fh5co-property property-individual">
+                    <figure>
+                        <a href="#" id="available" class="tag"> Disponible </a>
 
-                            <div id="carouselExampleControls" style="width: 100%" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner" data-toggle="modal" data-target="#galleryModal">
-                                    {% for pi in ofice_local_details_alquis.postimagenes_set.all %}
-                                    <div class="item{% if forloop.first %} active {% endif %}">
-                                        <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
-                                    </div>
-                                    {% endfor %}
+                        <div id="carouselExampleControls" style="width: 100%" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" data-toggle="modal" data-target="#galleryModal">
+                                {% for pi in ofice_local_details_alquis.postimagenes_set.all %}
+                                <div class="item{% if forloop.first %} active {% endif %}">
+                                    <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
                                 </div>
-                                <div class="carousel-controls">
-                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <!-- <span class=""> <-- </span> -->
-                                        <i class="fa fa-arrow-left"></i>
-                                        <!-- SACAR LOS SPAN EN TODOS LOS ARTICULOS INDIVIDUALES -->
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <!-- <span class=""> -> </span> -->
-                                        <i class="fa fa-arrow-right"></i>
-                                    </a>
-                                </div>
+                                {% endfor %}
                             </div>
-                        </figure>
-
-                        <div class="fh5co-property-innter">
-                            <h3><a href="#">{{ofice_local_details_alquis.title}}</a></h3>
-                            <div class="price-status">
-                                <span class="per">$</span><span class="price">{{ofice_local_details_alquis.price}}<span class="per">/Mes</span></span>
+                            <div class="carousel-controls">
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <!-- <span class=""> <-- </span> -->
+                                    <i class="fa fa-arrow-left"></i>
+                                    <!-- SACAR LOS SPAN EN TODOS LOS ARTICULOS INDIVIDUALES -->
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <!-- <span class=""> -> </span> -->
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
                             </div>
-
-                            <p>{{ofice_local_details_alquis.content}} </p>
                         </div>
-                        <p class="fh5co-property-specification">
+                    </figure>
 
-                            <span><strong>{{ofice_local_details_alquis.ambientes}}  </strong>   m2 de Superficie </span>
-                            <span>
+                    <div class="fh5co-property-innter">
+                        <h3><a href="#">{{ofice_local_details_alquis.title}}</a></h3>
+                        <div class="price-status">
+                            <span class="per">$</span><span class="price">{{ofice_local_details_alquis.price}}<span class="per">/Mes</span></span>
+                        </div>
+
+                        <p>{{ofice_local_details_alquis.content}} </p>
+                    </div>
+                    <p class="fh5co-property-specification">
+
+                        <span><strong>{{ofice_local_details_alquis.ambientes}}  </strong>   m2 de Superficie </span>
+                        <span>
                                 {% if ofice_local_details_alquis.plantas %}
                                 <strong>{{ofice_local_details_alquis.plantas}}</strong>
                                 
                                 <span> Plantas</span> {% endif %}
-                            </span><span>
+                        </span><span>
                                 <strong>
                                 {{ofice_local_details_alquis.baños}}
                                 </strong> Baños
                                 <i class="fa fa-bath"></i>
                                 </span>
 
-                        </p>
-                    </div>
+                    </p>
                 </div>
+            </div>
 
-                <!-- Modal -->
-                <div class="modal fade" style='z-index: 999' id="galleryModal" data-backdrop="false" tabindex="-1" role="dialog">
+            <!-- Modal -->
+            <div class="modal fade" style='z-index: 999' id="galleryModal" data-backdrop="false" tabindex="-1" role="dialog">
 
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="galleryModalLabel">
-                                </h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="galleryModalLabel">
+                            </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
-                            </div>
-                            <div class="modal-body">
-                                <!-- Cuando clickeas en esta clase carousel-inner, se abre el modal "galleryModal" -->
-                                <div id="carouselGalleryControls" class="carousel slide" data-ride="carousel">
-                                    <div class="carousel-inner">
-                                        {% for p in ofice_local_details_alquis.postimagenes_set.all%}
-                                        <div class="item {% if forloop.first%} active {% endif %}">
-                                            <!-- Estas Imagenes deberian ser variables y venir del for (Base de datos) -->
-                                            <img class="d-block w-100" src="{{p.image.url}}" alt="First slide">
-                                        </div>
-                                        {% endfor %}
-
-
+                        </div>
+                        <div class="modal-body">
+                            <!-- Cuando clickeas en esta clase carousel-inner, se abre el modal "galleryModal" -->
+                            <div id="carouselGalleryControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    {% for p in ofice_local_details_alquis.postimagenes_set.all%}
+                                    <div class="item {% if forloop.first%} active {% endif %}">
+                                        <!-- Estas Imagenes deberian ser variables y venir del for (Base de datos) -->
+                                        <img class="d-block w-100" src="{{p.image.url}}" alt="First slide">
                                     </div>
+                                    {% endfor %}
 
-                                    <a class="carousel-control-prev" href="#carouselGalleryControls" role="button" data-slide="prev">
-                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <i class="fa fa-arrow-left"></i>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselGalleryControls" role="button" data-slide="next">
-                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <i class="fa fa-arrow-right"></i>
-                                    </a>
+
                                 </div>
 
-
+                                <a class="carousel-control-prev" href="#carouselGalleryControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <i class="fa fa-arrow-left"></i>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselGalleryControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <i class="fa fa-arrow-right"></i>
+                                </a>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
-
             </div>
+
         </div>
-        {% endblock %}
+    </div>
+    {% endblock %}
