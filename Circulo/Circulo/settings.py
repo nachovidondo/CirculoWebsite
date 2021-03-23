@@ -26,7 +26,7 @@ SECRET_KEY = '!^_s5gw7tjan9#4i)=)qg(1kib_r5w*es&lbhlh5d(_8gwmuk0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =True
 
-ALLOWED_HOSTS = ['168.197.49.41', 'vps-1944930-x.dattaweb.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['168.197.49.41', 'vps-1944930-x.dattaweb.com', 'localhost', '127.0.0.1','circuloin.com']
 
 
 # Application definition
