@@ -124,7 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = "/var/www/vps-1944930-x.dattaweb.com/static/"
+STATIC_ROOT = "/var/www/html/static/"
 
 
 
