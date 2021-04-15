@@ -44,7 +44,7 @@ class PostInicio(models.Model):
 class PostImagenes(models.Model):
     
     post= models.ForeignKey(PostInicio, default =None ,on_delete=models.CASCADE)
-    image = models.ImageField(upload_to ="Imagenes",verbose_name="Imagenes") 
+    image = models.ImageField(upload_to ="Inicio",verbose_name="Imagenes") 
    
     class Meta:
         verbose_name="Agregar una Imagen"
