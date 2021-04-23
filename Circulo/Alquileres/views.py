@@ -1,6 +1,6 @@
 from . models import PostAlquiler
 from django.shortcuts import render,get_object_or_404
-# Create your views here.
+from django.core.paginator import Paginator
 from .models import Category, PostAlquiler
 
 
@@ -15,7 +15,10 @@ def alqui_monoambientes(request):
     return render(request,'Alquileres/alqui_monoambientes.html',{'monoambientes': monoambientes})
 def alqui_dptoundormi(request):
     dptoundormis= PostAlquiler.objects.filter(categories=Category.objects.get(nombre="Departamento 1 Dormitorio"))
-    return render(request,'Alquileres/alqui_dptoundormi.html',{'dptoundormis': dptoundormis})
+    paginator = Paginator(dptoundormis, 3)
+    page = request.GET.get('page')
+    page_articles = paginator.get_page(page)
+    return render(request,'Alquileres/alqui_dptoundormi.html',{'dptoundormis': page_articles})
 def alqui_dptodosdormi(request):
     dptodosdormis= PostAlquiler.objects.filter(categories=Category.objects.get(nombre="Departamento 2 Dormitorios"))
     return render(request,'Alquileres/alqui_dptodosdormi.html',{'dptodosdormis': dptodosdormis})
