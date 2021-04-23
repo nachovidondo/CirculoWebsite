@@ -50,11 +50,12 @@
                         <figure>
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    {% for pi in dptoundormi.postimagenes_set.all %}
+                                    {% for pi in dptoundormi.postimagenes_set.all %} {% if forloop.counter == 1 %}
                                     <div class="item {% if forloop.first %} active {% endif %}">
+
                                         <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
                                     </div>
-                                    {% endfor %}
+                                    {% endif %} {% endfor %}
 
                                 </div>
 
@@ -81,28 +82,9 @@
                         </p>
                     </div>
                 </div>
-                
 
-                <!-- Modal -->
-                <div class="modal fade" style='z-index: 999' id="galleryModal" data-backdrop="false" tabindex="-1" role="dialog">
 
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="galleryModalLabel">
-                                </h5>
-
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
                 {% endfor %}
-               </div>
-       </div>
- {% include 'Alquileres/pagination.html' %}
-     
-        {% endblock %}
+            </div>
+        </div>
+        {% include 'Alquileres/pagination.html' %} {% endblock %}
