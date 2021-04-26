@@ -42,68 +42,48 @@
                     <h2>Encontra en esta sección todos nuestros Departamentos disponibles!</h2>
                 </div>
 
-                <!--  Carousel -->
                 {% for monoambiente in monoambientes %}
                 <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
                     <div class="fh5co-property">
                         <figure>
                             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
-                                    {% for pi in monoambiente.postimagenes_set.all %}
+                                    {% for pi in monoambiente.postimagenes_set.all %} {% if forloop.counter == 1 %}
                                     <div class="item {% if forloop.first %} active {% endif %}">
+        
                                         <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
                                     </div>
-                                    {% endfor %}
-
+                                    {% endif %} {% endfor %}
+        
                                 </div>
-
+        
                             </div>
-                            <a href="{% url 'monoambiente_details_alquis' monoambiente.id  %}" class="tag"> Ver Propiedad</a>
+                            <a href="{% url 'article' monoambiente.id  %}" class="tag"> Ver Propiedad</a>
                         </figure>
-
+        
                         <div class="fh5co-property-innter">
-
-                            <h3><a href="{% url 'monoambiente_details_alquis' monoambiente.id  %}">{{monoambiente.title}}</a></h3>
-
+        
+                            <h3><a href="{% url 'article' monoambiente.id  %}">{{monoambiente.title}}</a></h3>
+        
                             <div class="price-status">
                                 <span class="per">$</span><span class="price">{{monoambiente.price}}<span class="per">/Mes</span></span>
                             </div>
-
+        
                             <div class="property-content-wrapper">
                                 <p>{{monoambiente.content}} </p>
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span>{{monoambiente.frente}}</span>
-                            <span>{% if monoambiente.balcon %}
-                                {{monoambiente.balcon}}
-                                {% endif %}
-
-                            </span>
-
                             <span><strong>{{monoambiente.baños}}</strong> Baño  <i class="fa fa-bath"></i></span>
+                            <br><span>{{monoambiente.frente}}</span>
+                            <span>   {% if monoambiente.balcon %} {{monoambiente.balcon}} {% endif %} </span>
                         </p>
                     </div>
                 </div>
-
-                <!-- Modal -->
-                <div class="modal fade" style='z-index: 999' id="galleryModal" data-backdrop="false" tabindex="-1" role="dialog">
-
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="galleryModalLabel">
-                                </h5>
-
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
+        {% endfor %}
+    </div>
+</div>
+        {% include 'Alquileres/mono_pagination.html' %} 
         {% endblock %}
+
+ 

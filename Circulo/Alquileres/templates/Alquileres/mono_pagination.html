@@ -1,0 +1,26 @@
+<div >
+    {% if monoambientes.has_other_pages %}
+    <ul class="pagination">
+      {% if monoambientes.has_previous %}
+        <li><a href="?page={{ monoambientes.previous_page_number }}">&laquo;</a></li>
+      {% else %}
+        <li class="disabled"><span>&laquo;</span></li>
+      {% endif %}
+      {% for i in monoambientes.paginator.page_range %}
+        {% if monoambientes.number == i %}
+          <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+        {% else %}
+          <li><a href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+      {% endfor %}
+      {% if monoambientes.has_next %}
+        <li><a href="?page={{ monoambientes.next_page_number }}">&raquo;</a></li>
+      {% else %}
+        <li class="disabled"><span>&raquo;</span></li>
+      {% endif %}
+    </ul>
+</div>
+</div>
+</div>
+</div>
+  {% endif %}
