@@ -12,7 +12,11 @@ def alqui_departamentos(request):
     return render(request,'Alquileres/alqui_departamentos.html')
 def alqui_monoambientes(request):
     monoambientes= PostAlquiler.objects.filter(categories=Category.objects.get(nombre="Monoambientes"))
-    return render(request,'Alquileres/alqui_monoambientes.html',{'monoambientes': monoambientes})
+    paginator = Paginator(monoambientes, 3)
+    page = request.GET.get('page')
+    page_articles = paginator.get_page(page)
+    return render(request,'Alquileres/alqui_monoambientes.html',{'monoambientes': page_articles})
+        
 def alqui_dptoundormi(request):
     dptoundormis= PostAlquiler.objects.filter(categories=Category.objects.get(nombre="Departamento 1 Dormitorio"))
     paginator = Paginator(dptoundormis, 3)
