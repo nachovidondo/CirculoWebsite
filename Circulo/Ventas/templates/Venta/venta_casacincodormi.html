@@ -65,7 +65,7 @@
                             <h3><a href="{% url 'articulos_venta' venta_casacincodormi.id  %}">{{venta_casacincodormi.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">U$S </span><span class="price">{{venta_casacincodormi.price}}<span class="per"></span></span>
+                                <span class="per">{{venta_casacincodormi.moneda}}</span><span class="price">{{venta_casacincodormi.price}}<span class="per"></span></span>
                             </div>
 
                             <di class="property-content-wrapper">

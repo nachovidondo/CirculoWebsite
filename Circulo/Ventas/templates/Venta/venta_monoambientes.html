@@ -66,7 +66,7 @@
                             <h3><a href="{% url 'monoambiente_details_ventas' venta_monoambiente.id  %}">{{venta_monoambiente.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">$</span><span class="price">{{venta_monoambiente.price}}<span class="per">/Mes</span></span>
+                                <span class="per">{{venta_monoambiente.moneda}} </span><span class="price">{{venta_monoambiente.price}}<span class="per">/Mes</span></span>
                             </div>
 
                             <div class="property-content-wrapper">
@@ -106,4 +106,4 @@
                 {% endfor %}
             </div>
         </div>
-        {% endblock %}
+        {% include 'Venta/mono_pagination.html' %} {% endblock %}

@@ -25,7 +25,10 @@ def alqui_dptoundormi(request):
     return render(request,'Alquileres/alqui_dptoundormi.html',{'dptoundormis': page_articles})
 def alqui_dptodosdormi(request):
     dptodosdormis= PostAlquiler.objects.filter(categories=Category.objects.get(nombre="Departamento 2 Dormitorios"))
-    return render(request,'Alquileres/alqui_dptodosdormi.html',{'dptodosdormis': dptodosdormis})
+    paginator = Paginator(dptodosdormis, 3)
+    page = request.GET.get('page')
+    page_articles = paginator.get_page(page)
+    return render(request,'Alquileres/alqui_dptodosdormi.html',{'dptodosdormis': page_articles})
 def alqui_dptotresdormi(request):
     dptotresdormis= PostAlquiler.objects.filter(categories=Category.objects.get(nombre="Departamento 3 Dormitorios"))
     return render(request,'Alquileres/alqui_dptotresdormi.html',{'dptotresdormis': dptotresdormis})

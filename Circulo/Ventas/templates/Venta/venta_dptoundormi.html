@@ -66,7 +66,7 @@
                             <h3><a href="{% url 'articulos_venta' venta_dptoundormi.id  %}">{{venta_dptoundormi.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">U$S </span><span class="price">{{venta_dptoundormi.price}}<span class="per"></span></span>
+                                <span class="per">{{venta_dptoundormi.moneda}} </span><span class="price">{{venta_dptoundormi.price}}<span class="per"></span></span>
                             </div>
 
                             <div class="property-content-wrapper">
@@ -101,4 +101,5 @@
                 {% endfor %}
             </div>
         </div>
-        {% endblock %}
+
+        {% include 'Venta/venta_dptoundormi_pagination.html' %} {% endblock %}

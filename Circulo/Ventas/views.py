@@ -1,5 +1,5 @@
 from django.shortcuts import render,get_object_or_404
-# Create your views here.
+from django.core.paginator import Paginator
 from .models import Category, Post
 
 
@@ -7,15 +7,28 @@ def ventas(request):
     return render (request,'Venta/ventas.html')
 def venta_departamentos(request):
     return render(request,'Venta/venta_departamentos.html')
+
+#Departamentos Paginados
 def venta_monoambientes(request):
     venta_monoambientes= Post.objects.filter(categories=Category.objects.get(nombre="Monoambientes"))
-    return render(request,'Venta/venta_monoambientes.html',{'venta_monoambientes': venta_monoambientes})
+    paginator = Paginator(venta_monoambientes, 3)
+    page = request.GET.get('page')
+    page_articles = paginator.get_page(page)
+    return render(request,'Venta/venta_monoambientes.html',{'venta_monoambientes': page_articles})
 def venta_dptoundormi(request):
     venta_dptoundormis= Post.objects.filter(categories=Category.objects.get(nombre="Departamento 1 Dormitorio"))
-    return render(request,'Venta/venta_dptoundormi.html',{'venta_dptoundormis': venta_dptoundormis})
+    paginator = Paginator(venta_dptoundormis, 3)
+    page = request.GET.get('page')
+    page_articles_dptoundormi = paginator.get_page(page)
+    return render(request,'Venta/venta_dptoundormi.html',{'venta_dptoundormis': page_articles_dptoundormi})
 def venta_dptodosdormi(request):
     venta_dptodosdormis= Post.objects.filter(categories=Category.objects.get(nombre="Departamento 2 Dormitorios"))
-    return render(request,'Venta/venta_dptodosdormi.html',{'venta_dptodosdormis': venta_dptodosdormis})
+    paginator = Paginator(venta_dptodosdormis, 3)
+    page = request.GET.get('page')
+    page_articles = paginator.get_page(page)
+    return render(request,'Venta/venta_dptodosdormi.html',{'venta_dptodosdormis': page_articles})
+
+
 def venta_dptotresdormi(request):
     venta_dptotresdormis= Post.objects.filter(categories=Category.objects.get(nombre="Departamento 3 Dormitorios"))
     return render(request,'Venta/venta_dptotresdormi.html',{'venta_dptotresdormis': venta_dptotresdormis})

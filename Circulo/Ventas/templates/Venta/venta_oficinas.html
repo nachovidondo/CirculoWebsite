@@ -67,7 +67,7 @@
                             <h3><a href="{% url 'ofice_local_details_ventas' venta_oficina.id  %}">{{venta_oficina.title}}</a></h3>
 
                             <div class="price-status">
-                                <span class="per">U$S</span><span class="price">{{venta_oficina.price}}</span>
+                                <span class="per">{{venta_oficina.moneda}}</span><span class="price">{{venta_oficina.price}}</span>
                             </div>
 
                             <div class="property-content-wrapper">

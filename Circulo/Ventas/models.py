@@ -17,6 +17,7 @@ class Category(models.Model):
     
     
 class Post(models.Model):
+    moneda=(('U$S','U$S'),('$','$'))
     balcon=(('Con Balcon','Con Balcon'),('Sin Balcon','Sin Balcon'))
     balcon = models.CharField(max_length=100, choices = balcon,default ="Con Balcon")
     frente= (('Externo','Externo'),('Contrafrente','Contrafrente'))
@@ -29,6 +30,7 @@ class Post(models.Model):
     superficie= models.FloatField(verbose_name="Superficie",blank =True,null =True )
     baños= models.IntegerField(verbose_name="Baños",blank = True,null =True)
     plantas= models.IntegerField(verbose_name="Plantas", blank = True,null =True)
+    moneda=models.CharField(max_length=100, choices=moneda, default = "$")
     autor = models.ForeignKey(User,verbose_name="Autor", on_delete=models.CASCADE)
     categories= models.ManyToManyField(Category, verbose_name="Categoria")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Creado")
