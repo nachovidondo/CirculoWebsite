@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{monoambiente.baños}}</strong> Baño  <i class="fa fa-bath"></i></span>
+                            {% if monoambiente.baños %}<span><strong>{{monoambiente.baños}}</strong> Baño  <i class="fa fa-bath"></i></span> {% endif %}
                             <br><span>{{monoambiente.frente}}</span>
                             <span>   {% if monoambiente.balcon %} {{monoambiente.balcon}} {% endif %} </span>
                         </p>

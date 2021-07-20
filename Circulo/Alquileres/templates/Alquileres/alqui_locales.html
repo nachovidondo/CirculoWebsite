@@ -11,9 +11,12 @@
                     </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'alqui_casas' %}">Casas </a></li>
-                            <li><a href="{% url 'alqui_departamentos' %}">Departamentos </a></li>
-                            <li><a href="{% url 'alqui_oficinas' %}"> Oficinas</a></li>
+                            <li><a href="{% url 'alqui_departamentos' %}">Departamentos</a></li>
+                            <li><a href="{% url 'alqui_casas' %}">Casas</a></li>
+                            <li><a href="{% url 'alqui_duplex' %}">Duplex</a></li>
+                            <li><a href="{% url 'alqui_oficinas' %}">Oficinas</a></li>
+                            
+                            <li><a href="{% url 'alqui_galpones' %}">Galpones</a></li>
 
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
@@ -75,7 +78,8 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span>{% if locale.plantas %}<strong>{{locale.plantas}}</strong>   Plantas{% endif %}</span> <span><strong>{{locale.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{locale.superficie}}  </strong>   m2 de Superficie </span>
+                            <span>{% if locale.plantas > 1  %}<strong>{{locale.plantas}}</strong>   Plantas{% endif %}</span>  <span>{% if locale.plantas == 1  %}<strong>{{locale.plantas}}</strong>   Planta{% endif %}</span> 
+                            {% if locale.baños > 1  %}<span><strong>{{locale.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>{% endif %}{% if locale.baños == 1  %}<span><strong>{{locale.baños}}</strong> Baño  <i class="fa fa-bath"></i></span>{% endif %} <span><strong>{{locale.superficie}}  </strong>   m2 de Superficie </span>
                         </p>
                     </div>
                 </div>

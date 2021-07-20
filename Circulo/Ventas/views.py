@@ -63,7 +63,11 @@ def venta_duplexdosdormi(request):
 def venta_duplextresdormi(request):
     venta_duplextresdormis= Post.objects.filter(categories=Category.objects.get(nombre="Duplex 3 Dormitorios"))
     return render(request,'Venta/venta_duplextresdormi.html',{'venta_duplextresdormis': venta_duplextresdormis})
+def venta_galpones(request):
+    venta_galpones= Post.objects.filter(categories=Category.objects.get(nombre="Galpones"))
+    return render(request,'Venta/venta_galpones.html',{'venta_galpones': venta_galpones})
 
+#Detalles por cada articulo
 def articulos_venta(request, post_id):
     articulos_venta = get_object_or_404(Post, pk = post_id)
     return render (request,'Venta/articulos_venta.html',{'articulos_venta' : articulos_venta})
@@ -73,3 +77,6 @@ def ofice_local_details_ventas(request, post_id):
 def monoambiente_details_ventas(request, post_id):
     monoambiente_details_ventas = get_object_or_404(Post, pk = post_id)
     return render (request,'Venta/monoambiente_details_ventas.html',{'monoambiente_details_ventas' : monoambiente_details_ventas})
+def galpones_detail_ventas(request, post_id):
+    galpones_detail_ventas = get_object_or_404(Post, pk = post_id)
+    return render (request,'Venta/galpones_detail_ventas.html',{'galpones_detail_ventas' : galpones_detail_ventas})

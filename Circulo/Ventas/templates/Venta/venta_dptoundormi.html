@@ -13,7 +13,7 @@
                         <ul>
                             <li><a href="{% url 'venta_monoambientes' %}">Monoambientes </a></li>
                             <li><a href="{% url 'venta_dptodosdormi' %}">Departamentos 2 Dormitorios </a></li>
-                            <li><a href="{% url 'venta_dptotresdormi' %}">Departamentos 3 Dormitorios</a></li>
+                            <li><a href="{% url 'venta_dptoundormi' %}">Departamentos 3 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
                         </ul>
@@ -74,9 +74,9 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span><strong>{{venta_dptoundormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><span><strong>{{venta_dptoundormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>
+                            <span><strong>{{venta_dptoundormi.ambientes}} </strong> Dormitorio   <i class="fa fa-bed"></i></i></span><span><strong>{{venta_dptoundormi.baños}}</strong> Baño  <i class="fa fa-bath"></i></span>
                             <br><span>{{venta_dptoundormi.frente}}</span>
-                            <span>   {% if venta_dptoundormi.balcon %} {{venta_dptoundormi.balcon}} {% endif %} </span>
+                            <span>  {% if venta_dptoundormi.balcon %} {{venta_dptoundormi.balcon}} {% endif %} </span><br>{% if venta_dptoundormi.superficie %}<span><strong>{{venta_dptoundormi.superficie}} </strong> m2 de Superficie</span>{% endif %}
                         </p>
                     </div>
                 </div>

@@ -10,10 +10,11 @@
                         <ul>
                             <li><a href="{% url 'venta_casas' %}">Casas</a></li>
                             <li><a href="{% url  'venta_locales' %} ">Locales</a></li>
-                            <li><a href="{% url 'venta_duplex' %}">Duplex</a></li>
-                            <li><a href="{% url 'venta_departamentos' %}">Departamentos</a></li>
                             <li><a href="{% url 'venta_oficinas' %}">Oficinas</a></li>
-
+                            <li><a href="{% url 'venta_terrenos' %}">Terrenos</a></li>
+                            <li><a href="{% url 'venta_departamentos' %}">Departamentos</a></li>
+                            <li><a href="{% url 'venta_duplex' %}">Duplex</a></li>
+                            <li><a href="{% url 'venta_galpones' %}">Galpones</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
                         </ul>
@@ -84,18 +85,14 @@
                         <p>{{articulos_venta.content}} </p>
                     </div>
                     <p class="fh5co-property-specification">
-                        <span>
-                                <strong>
-                                {{articulos_venta.baños}}
-                                </strong> 
-                                Baños  
-                                <i class="fa fa-bath"></i>
-                            </span>
+                        <span>{% if articulos_venta.baños == 1 %}<strong> {{articulos_venta.baños}} </strong> Baño <i class="fa fa-bath"></i>{% endif %}</span><span>{% if articulos_venta.baños > 1 %}<strong>  {{articulos_venta.baños}} </strong> Baños<i class="fa fa-bath">{% endif %}</i> </span> <span>  <strong>  {% if articulos_venta.superficie %}    {{articulos_venta.superficie}}</strong>    m2 de Superficie {% endif %}  </span>
+                               
+                           
                         <span>
                                 <strong>{{articulos_venta.ambientes}} </strong> 
                                 Dormitorios
                                 <i class="fa fa-bed"></i>
-                            </span>
+                            </span><span>{{articulos_venta.balcon}}</span>
                     </p>
                 </div>
             </div>

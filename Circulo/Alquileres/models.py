@@ -18,7 +18,7 @@ class Category(models.Model):
     
     
 class PostAlquiler(models.Model):
-    balcon=(('Con Balcon','Con Balcon'),('',''))
+    balcon=(('Con Balcon','Con Balcon'),('Sin Balcon','Sin Balcon'))
     balcon = models.CharField(max_length=100, choices = balcon,default="Con Balcon", null=True, blank=True)
     frente= (('Externo','Externo'),('Contrafrente','Contrafrente'))
     frente = models.CharField(max_length=100,choices=frente, default = "Externo")

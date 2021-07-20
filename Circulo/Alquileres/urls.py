@@ -22,7 +22,9 @@ urlpatterns = [
     path('alqui_duplex/', views.alqui_duplex ,name ="alqui_duplex"),
     path('alqui_duplexdosdormi/', views.alqui_duplexdosdormi ,name ="alqui_duplexdosdormi"),
     path('alqui_duplextresdormi/', views.alqui_duplextresdormi ,name ="alqui_duplextresdormi"),
+    path('alqui_galpones/', views.alqui_galpones ,name ="alqui_galpones"),
     path('article/<int:postalquiler_id>/', views.article, name = "article"),
+    path('galpones_detail_alqui/<int:postalquiler_id>/', views.galpones_detail_alqui, name = "galpones_detail_alqui"),
     path('ofice_local_details_alquis/<int:postalquiler_id>/', views.ofice_local_details_alquis, name = "ofice_local_details_alquis"),
     path('monoambiente_details_alquis/<int:postalquiler_id>/', views.monoambiente_details_alquis, name = "monoambiente_details_alquis"),
 

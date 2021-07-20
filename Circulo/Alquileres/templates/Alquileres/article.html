@@ -85,18 +85,35 @@
                     </div>
                     <p class="fh5co-property-specification">
 
-                        <span>
+                       {% if articles.ambientes == 1 %} <span>
+                                <strong>{{articles.ambientes}} </strong> 
+                                Dormitorio
+                                <i class="fa fa-bed"></i>
+                            </span>{% endif %}
+                            {% if articles.ambientes > 1 %} <span>
                                 <strong>{{articles.ambientes}} </strong> 
                                 Dormitorios
                                 <i class="fa fa-bed"></i>
-                            </span>
+                            </span>{% endif %}
+
+                            {% if articles.baños == 1%}
                         <span>
+                            
                                 <strong>
                                 {{articles.baños}}
                                 </strong> 
-                                Baños  
+                                Baño
                                 <i class="fa fa-bath"></i>
-                            </span>
+                            </span>{% endif %}
+                            {% if articles.baños > 1 %}
+                            <span>
+                                
+                                    <strong>
+                                    {{articles.baños}}
+                                    </strong> 
+                                    Baños
+                                    <i class="fa fa-bath"></i>
+                                </span>{% endif %}
                         <span>{{articles.frente}}</span>
                         <span>   {% if articles.balcon %} {{articles.balcon}} {% endif %} </span>
                     </p>

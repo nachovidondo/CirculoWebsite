@@ -11,9 +11,12 @@
                     </span>
                     <nav role="navigation">
                         <ul>
-                            <li><a href="{% url 'alqui_casas' %}">Casas </a></li>
-                            <li><a href="{% url 'alqui_departamentos' %}">Departamentos </a></li>
-                            <li><a href="{% url 'alqui_locales' %}"> Locales</a></li>
+                            <li><a href="{% url 'alqui_departamentos' %}">Departamentos</a></li>
+                            <li><a href="{% url 'alqui_casas' %}">Casas</a></li>
+                            <li><a href="{% url 'alqui_duplex' %}">Duplex</a></li>
+                          
+                            <li><a href="{% url 'alqui_locales' %}">Locales</a></li>
+                            <li><a href="{% url 'alqui_galpones' %}">Galpones</a></li>
 
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
@@ -75,7 +78,7 @@
                             </div>
                         </div>
                         <p class="fh5co-property-specification">
-                            <span>{% if oficina.plantas %}<strong>{{oficina.plantas}}</strong>   Plantas{% endif %}</span> <span><strong>{{oficina.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> <span><strong>{{oficina.ambientes}}  </strong>   m2 de Superficie </span>
+                            <span>{% if oficina.plantas > 1 %}<strong>{{oficina.plantas}}</strong>   Plantas{% endif %}</span> <span>{% if oficina.plantas == 1 %}<strong>{{oficina.plantas}}</strong>   Planta{% endif %}</span> {% if oficina.baños == 1 %}<span><strong>{{oficina.baños}}</strong> Baño  <i class="fa fa-bath"></i></span> {% endif %}{% if oficina.baños > 1 %}<span><strong>{{oficina.baños}}</strong> Baños  <i class="fa fa-bath"></i></span> {% endif %}<span><strong>{% if oficina.ambientes %}{{oficina.ambientes}}  </strong>   m2 de Superficie </span>{% endif %}
                         </p>
                     </div>
                 </div>

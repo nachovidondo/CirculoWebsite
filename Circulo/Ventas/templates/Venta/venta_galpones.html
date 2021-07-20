@@ -1,0 +1,106 @@
+{% extends 'App1/base.html'%} {% load static %} {% block header %}
+<div id="fh5co-page">
+    <header id="fh5co-header" role="banner">
+        <div class="container">
+            <div class="row">
+                <div class="header-inner">
+                    <span class="rounded-circle">
+				  		<span class="rounded-circle">
+                            <span class="rounded-circle"><a href="{% url 'inicio' %}"><img src="{% static 'Appp1/images/1_negro.png' %}" style="margin-top: 8px" width="90px" height="60px"> </img>
+				  </span>
+                    </span>
+                    <nav role="navigation">
+                        <ul>
+                            <li><a href="{% url 'venta_casas' %}">Casas</a></li>
+                            <li><a href="{% url  'venta_locales' %} ">Locales</a></li>
+                            <li><a href="{% url 'venta_oficinas' %}">Oficinas</a></li>
+                            <li><a href="{% url 'venta_terrenos' %}">Terrenos</a></li>
+                            <li><a href="{% url 'venta_departamentos' %}">Departamentos</a></li>
+                            <li><a href="{% url 'venta_duplex' %}">Duplex</a></li>
+                            
+
+                            <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% endblock %} {% block content %}
+
+    <div class="fh5co-page-title" style="background-image: url({% static 'Appp1/images/slide_6.jpg'%});">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 animate-box">
+                    <h1><a href="{% url 'ventas' %}" style="text-decoration:none">Ventas</a></span> Galpones </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="best-deal">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box" data-animate-effect="fadeIn">
+                    <h2>Encontra en esta sección todos nuestros Galpones disponibles!</h2>
+                </div>
+
+                <!--  Carousel -->
+                {% for venta_galpone in venta_galpones %}
+                <div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
+                    <div class="fh5co-property">
+                        <figure>
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    {% for pi in venta_galpone.postimagenes_set.all %}
+                                    <div class="item {% if forloop.first %} active {% endif %}">
+                                        <img class="carousel-inner" src="{{pi.image.url}}" alt="First slide">
+                                    </div>
+                                    {% endfor %}
+
+                                </div>
+
+                            </div>
+                            <a href="{% url 'galpones_detail_ventas' venta_galpone.id  %}" class="tag"> Ver Propiedad</a>
+                        </figure>
+
+                        <div class="fh5co-property-innter">
+
+                            <h3><a href="{% url 'galpones_detail_ventas' venta_galpone.id  %}">{{venta_galpone.title}}</a></h3>
+
+                            <div class="price-status">
+                                <span class="per">{{venta_galpone.moneda}}</span><span class="price">{{venta_galpone.price}}</span>
+                            </div>
+
+                            <div class="property-content-wrapper">
+                                <p>{{venta_galpone.content}} </p>
+                            </div>
+                        </div>
+                        <p class="fh5co-property-specification">
+                            <span>{% if venta_galpone.plantas == 1 %}<strong>{{venta_galpone.plantas}}</strong>   Planta{% endif %} {% if venta_galpone.plantas > 1 %}<strong>{{venta_galpone.plantas}} </strong>  Plantas {% endif %}</span> <span><strong>{% if venta_galpone.baños == 1 %}{{venta_galpone.baños}} </strong> Baño  {% endif %} <strong> {% if venta_galpone.baños > 1 %} {{venta_galpone.baños}} </strong> </strong> Baños {% endif %}</span><i class="fa fa-bath"></i></span> <span><strong>{% if venta_galpone.superficie %}{{venta_galpone.superficie}}  </strong>   m2 de Superficie {% endif %}  <i class="fa fa-bath"></i></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" style='z-index: 999' id="galleryModal" data-backdrop="false" tabindex="-1" role="dialog">
+
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="galleryModalLabel">
+                                </h5>
+
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endblock %}

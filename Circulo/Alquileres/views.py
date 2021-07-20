@@ -63,6 +63,9 @@ def alqui_duplexdosdormi(request):
 def alqui_duplextresdormi(request):
     duplextresdormis= PostAlquiler.objects.filter(categories=Category.objects.get(nombre="Duplex 3 Dormitorios"))
     return render(request,'Alquileres/alqui_duplextresdormi.html',{'duplextresdormis': duplextresdormis})
+def alqui_galpones(request):
+    alqui_galpones= PostAlquiler.objects.filter(categories=Category.objects.get(nombre="Galpones"))
+    return render(request,'Alquileres/alqui_galpones.html',{'alqui_galpones': alqui_galpones})
 
 def article(request, postalquiler_id):
     articles = get_object_or_404(PostAlquiler, pk = postalquiler_id)
@@ -73,6 +76,9 @@ def ofice_local_details_alquis(request, postalquiler_id):
 def monoambiente_details_alquis(request, postalquiler_id):
     monoambiente_details_alquis = get_object_or_404(PostAlquiler, pk = postalquiler_id)
     return render (request,'Alquileres/monoambiente_details_alquis.html',{'monoambiente_details_alquis' : monoambiente_details_alquis})
+def galpones_detail_alqui(request, postalquiler_id):
+    galpones_detail_alqui = get_object_or_404(PostAlquiler, pk = postalquiler_id)
+    return render (request,'Alquileres/galpones_detail_alqui.html',{'galpones_detail_alqui' : galpones_detail_alqui})
 
 
     

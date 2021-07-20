@@ -12,7 +12,7 @@
                     <nav role="navigation">
                         <ul>
                             <li><a href="{% url 'venta_monoambientes' %}">Monoambientes </a></li>
-                            <li><a href="{% url 'venta_dptoundormi' %}">Departamentos 1 Dormitorios </a></li>
+                            <li><a href="{% url 'venta_dptoundormi' %}">Departamentos 1 Dormitorio</a></li>
                             <li><a href="{% url 'venta_dptodosdormi' %}">Departamentos 2 Dormitorios</a></li>
 
                             <li class="cta"><a href="{% url 'contacto' %}">Contactanos</a></li>
@@ -76,7 +76,7 @@
                         <p class="fh5co-property-specification">
                             <span><strong>{{venta_dptotresdormi.ambientes}} </strong> Dormitorios  <i class="fa fa-bed"></i></i></span><span><strong>{{venta_dptotresdormi.baños}}</strong> Baños  <i class="fa fa-bath"></i></span>
                             <br><span>{{venta_dptotresdormi.frente}}</span>
-                            <span>   {% if venta_dptotresdormi.balcon %} {{venta_dptotresdormi.balcon}} {% endif %} </span>
+                            <span>  {% if venta_dptotresdormi.balcon %} {{venta_dptotresdormi.balcon}} {% endif %} </span><br><span><strong>{{venta_dptotresdormi.superficie}} </strong> m2 de Superficie</span>
                         </p>
                     </div>
                 </div>
